@@ -1,0 +1,365 @@
+@import "tailwindcss";
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* リセット */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.en {
+  font-family: "Playfair", serif;
+  font-size: 20px;
+}
+h1,
+h2,
+p,
+a,
+ul,
+li,
+span {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 16px;
+}
+input {
+  border: 0.5px solid #606060;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: right;
+  height: 30px;
+  width: 220px;
+  margin-right: 5px;
+  padding-right: 10px;
+}
+
+/* 共通要素 */
+/* ヘッダー分ページ先頭位置をさげる */
+.co-headerBunSageru {
+  margin-top: 50px;
+}
+/* モバイル位置 */
+.co-mobilePosition {
+  width: 320px;
+  margin: 0 auto;
+}
+/* 太字 */
+.co-Bold {
+  font-weight: bold;
+}
+/* 見出し 緑*/
+.co-midashiGreen {
+  padding: 20px 0 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.co-midashiGreen span {
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: #A3C5BE;
+}
+.co-midashiGreen h1{
+  font-size: 18px;
+  font-weight: bold;
+  color: #60A092;
+  width: fit-content;
+}
+/* 見出し 2行　黒 */
+.co-midashi2sentBlackContainer {
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.co-midashi2sentBlackContainer span {
+  display: block;
+  width: 5px;
+  height: 50px;
+  background-color: #A3C5BE;
+}
+.co-midashi2sentBlack::before {
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: #A3C5BE;
+
+}
+.co-midashi2sentBlack p{
+  font-weight: bold;
+  color: #000;
+}
+.co-midashi2sentBlack p:nth-child(1) {
+  font-size: 12px;
+}
+.co-midashi2sentBlack p:nth-child(2) {
+  font-size: 18px;
+}
+/* 子見出し 緑 */
+.co-komidashiGreen {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 10px 0;
+}
+.co-komidashiGreen span{
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #A3C5BE;
+}
+.co-komidashiGreen h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 囲み　緑 */
+.co-kakomiGreen {
+  border: 1px solid #A3C5BE;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+/* 囲み　黒 */
+.co-kakomiBlack {
+  border: 0.5px solid #606060;
+  border-radius: 10px;
+  padding: 20px 30px 0 30px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin: 20px 0 5px 0;
+}
+/* ボタン類 */
+/* シュミレーションボタン */
+.co-simulationButton {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.co-simulationButton button{
+  border: 0.5px solid #606060;
+  border-radius: 5px;
+  padding: 3px 20px;
+  background-color: #60A092;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+  margin: 20px auto;
+  position:absolute;
+  top: 0;
+  z-index: 1;
+}
+.co-simulationButton button:hover {
+  top: 5px;
+  box-shadow: none;
+  background-color: #4d8478
+}
+/* input項目の単位 */
+.co-inputUnit {
+  font-size: 14px;
+  color: #606060;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* input項目のエラーメッセージ */
+.co-inputErrorMsg {
+  color: red;
+  font-size: 12px;
+  text-align: start;
+  padding-top: 3px;
+}
+
+
+/* header */
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background-color: #A3C5BE;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+}
+.headerContent h1 {
+  width: fit-content;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+/* コーストFIREとは app/components/coastFireSection/aboutCoastFire.tsx */
+.aboutCoastContainer {
+  padding: 30px 0 40px 0;
+  background-color: #fff;
+}
+.aboutCoastDescription p {
+  font-size: 14px;
+}
+
+
+/* 積立金額シュミレーター app/components/coastFireSection/coastFireSimulation.tsx */
+.SimulatorCoastContainer {
+  background-color: #E6F2F0;
+  padding: 30px 0 120px 0;
+}
+/* section1 */
+.SimulatorCoastDescription {
+  font-size: 14px;
+}
+.toMenseki {
+  color: #7883FF;
+  font-size: 12px;
+  border-bottom: 1px solid #7883FF;
+}
+.toMenseki:hover {
+  color: #3343f4;
+  border-bottom: 1px solid #3343f4;
+}
+/* section3 結果*/
+.SimulatorCoastResult {
+  padding: 20px 0 40px 0;
+  margin-bottom: 30px;
+}
+.SimulatorCoastResultSection {
+  margin-bottom: 50px;
+}
+.SimulatorCoastResultSection p{
+  font-size: 14px;
+}
+/* section4 免責*/
+.mensekiContainer {
+  background-color: #E6F2F0;
+  padding: 20px 0 100px 0;
+}
+
+
+/* 入力画面 app/components/coastFireSection/input/inputItems.tsx */
+.InputContainer h3{
+  font-weight: bold;
+}
+.InputYourSituation {
+  margin: 10px 0;
+}
+.inputItems {
+  margin-top:  20px;
+  margin-bottom: 5px;
+}
+.yourGoal {
+  margin: 40px 0;
+}
+
+/* 結果 */
+/* 元本到達までの積立額 */
+.coastTumitateResultAmount .one {
+  font-size: 18px;
+  font-weight: bold;
+  color: #60A092;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid #60A092;
+  padding: 10px 0;
+}
+.coastTumitateResultAmount .two {
+  font-size: 14px;
+  color: #60A092;
+}
+.coastTumitateResultAmount .three {
+  margin-top: 20px;
+}
+.coastTumitateResultAmount .four {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.coastTumitateResultAmount .five {
+  font-size: 14px;
+  color: #606060;
+  text-align: end;
+  margin-top: 10px;
+}
+
+/* 取り崩し */
+.torikuzushiAmountContent {
+  border: 1px solid #60A092;
+  background-color: #fff;
+  padding: 5px 0;
+}
+.torikuzushiAmountContent p{
+  width: fit-content;
+  margin: 0 auto;
+}
+.torikuzushiAmountContent p:nth-child(1){
+  font-weight: bold;
+  font-size: 18px;
+}
+.torikuzushiAmountContent p:nth-child(2){
+  font-size: 16px;
+}
+.about4perRule {
+  color: #606060;
+}
+.about4perRule p {
+  font-size: 14px;
+}
+.about4perRuleTitle {
+  display: flex;
+  justify-content: left;
+  gap:5px;
+  align-items: center;
+  margin: 30px 0 10px 0;
+}
+
+/* 免責事項 app/components/common/Menseki.tsx */
+.mensekiContent {
+  text-align: center;
+  color: #606060;
+  padding-bottom: 20px;
+}
+.mensekiContent h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mensekiContent ul {
+  list-style-type: disc;
+}
+.mensekiContent li {
+  text-align: left;
+  font-size: 14px;
+}
+/* 免責ページ */
+.mensekiPage {
+  padding-top: 100px;
+  height: 100vh;
+  background-color: #E6F2F0;
+}
