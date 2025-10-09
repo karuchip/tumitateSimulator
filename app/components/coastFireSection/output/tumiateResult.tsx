@@ -60,7 +60,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                     月 {formatCurrency(simulationResult.monthlyPMT)}円
                   </p>
                   <p className="two">
-                    {lastInput.coastAge}歳で必要元本の{formatCurrency(simulationResult.pvNeeded)}円に到達し、コーストFIRE達成の予想です。
+                    {lastInput.coastAge}歳で必要元本の{formatCurrency(simulationResult.pvNeeded)}円に到達し、コーストFIRE達成予定です。
                   </p>
 
                   {/* グラフ */}
@@ -118,12 +118,14 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
               {simulationResult && lastInput ? (
                 <div className="coastTumitateResultAmount">
                   {/* グラフ */}
-                  <ResultTumitateAmount
-                    resultTumitate={resultContinueTumitate}
-                    currentAgeYear={lastInput.currentAgeYear}
-                    coastAge={lastInput.coastAge}
-                    finalAge={lastInput.finalAge}
-                  />
+                  <div className="three">
+                    <ResultTumitateAmount
+                      resultTumitate={resultContinueTumitate}
+                      currentAgeYear={lastInput.currentAgeYear}
+                      coastAge={lastInput.coastAge}
+                      finalAge={lastInput.finalAge}
+                    />
+                  </div>
 
                   <p className="four">
                     {lastInput.coastAge}歳以降も同額（月 {formatCurrency(simulationResult.monthlyPMT)}円）を積み立て続けた場合、

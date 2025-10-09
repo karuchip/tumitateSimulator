@@ -135,14 +135,21 @@ export default function CoastFireChart({ resultTumitate, currentAgeYear, coastAg
     intersect: false,
   },
     plugins: {
-      legend: { display: true, position: "top" },
+      legend: { display: false, position: "top" }, //legend表示はtrue
       tooltip: {
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        titleColor: "#333",
+        bodyColor: "#333",
+        borderColor: "rgba(0,0,0,0.1)",
+        borderWidth: 1,
+        cornerRadius: 10,
+        bodyFont: { size: 12 },
         mode: "index",
         intersect: false,
         callbacks: {
           title: (tooltipItems) => `${tooltipItems[0].label}歳`,
           label: (context) =>
-            `${context.dataset.label}: ${context.parsed.y.toLocaleString()}万円`,
+            `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`,
           },
       },
       annotation: {

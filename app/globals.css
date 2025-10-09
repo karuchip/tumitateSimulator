@@ -250,7 +250,6 @@ input {
 /* section3 結果*/
 .SimulatorCoastResult {
   padding: 20px 0 40px 0;
-  margin-bottom: 30px;
 }
 .SimulatorCoastResultSection {
   margin-bottom: 50px;
@@ -293,7 +292,7 @@ input {
 }
 .coastTumitateResultAmount .two {
   font-size: 14px;
-  color: #60A092;
+  color: rgb(76, 127, 116);
 }
 .coastTumitateResultAmount .three {
   margin-top: 20px;
@@ -362,4 +361,39 @@ input {
   padding-top: 100px;
   height: 100vh;
   background-color: #E6F2F0;
+}
+
+/* メニュー */
+.menuContainer {
+  padding-top: 80px;
+}
+.menuItemContainer {
+  margin-top: 10px;
+}
+.menuItemsContent {
+  position: relative;
+}
+.menuItems {
+  position: absolute;
+  top: 0;
+  border: 1px solid #60A092;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+.menuItems:hover {
+  top: 5px;
+}
+.menuItems h2 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+  background-color: #60A092;
+  border-radius: 8px 8px 0 0 ;
+  padding: 5px 10px;
+  text-align: center;
+}
+.menuItems p {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #606060;
 }

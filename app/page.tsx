@@ -1,11 +1,34 @@
 "use client"
 
 import Link from "next/link"
+import AboutCoastFire from "./components/coastFireSection/aboutCoastFire";
 
 export default function Home() {
   return (
+
     <>
-      <Link href="/coastFirePage">コーストFIRE積立金額シュミレーター</Link>
+      <div className="menuContainer co-mobilePosition">
+
+        {/* <AboutCoastFire/> */}
+
+        <div className="co-midashiGreen">
+          <span></span>
+          <h1>シュミレーター一覧</h1>
+        </div>
+
+        <div className="menuItemContainer">
+
+          <div className="menuItemsContent">
+            <div className="menuItems">
+              <Link href="/coastFirePage">
+                <h2>コーストFIRE積立金額シュミレーター</h2>
+                <p>コーストFIRE達成までの積立金額をシュミレートできます。</p>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </>
   );
 }

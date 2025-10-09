@@ -14,6 +14,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import WarningIcon from '@mui/icons-material/Warning';
 import TollIcon from '@mui/icons-material/Toll';
+import HomeIcon from '@mui/icons-material/Home';
 import Link from 'next/link';
 
 export default function TemporaryDrawer() {
@@ -25,6 +26,22 @@ export default function TemporaryDrawer() {
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+
+      <List>
+        <ListItem disablePadding>
+          <Link href={"/"}>
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              ホーム
+              <ListItemText/>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+      </List>
+
+      <Divider />
 
       <List>
         <ListItem disablePadding>
