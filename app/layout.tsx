@@ -14,8 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "コーストFIREシュミレーター",
-  description: "コーストFIRE達成までの積立金額をシュミレートできるアプリです。",
+  title: "コーストFIREシミュレーター｜毎月いくらで達成できる？",
+  description:
+    "コーストFIREの達成時期や必要な積立額を簡単にシミュレーションできる無料ツール。毎月の積立額や運用利回りをもとに、あなたの資産の成長をグラフで確認できます。",
+  keywords:
+    "コーストFIRE, FIRE, 積立シミュレーター, 資産運用, 投資, 早期リタイア, ライフプラン, FIREシミュレーション",
+  openGraph: {
+    title: "コーストFIREシミュレーター",
+    description:
+      "コーストFIRE達成までの積立金額を簡単に計算できる無料アプリです。",
+    url: "https://tumitate-simulator.vercel.app/coastFirePage",
+    siteName: "コーストFIREシミュレーター",
+    locale: "ja_JP",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -28,12 +40,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="description" content="コーストFIRE達成までの積立金額をシュミレートできるアプリです。"></meta>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
-          {children}
+        {children}
+
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "コーストFIREシミュレーター",
+          "url": "https://tumitate-simulator.vercel.app/coastFirePage",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "All",
+          "description": "コーストFIRE達成に必要な積立額を計算できる無料シミュレーター。"
+        })}
+        </script>
       </body>
     </html>
   );

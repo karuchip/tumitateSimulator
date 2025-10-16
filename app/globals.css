@@ -29,7 +29,7 @@ body {
 }
 .en {
   font-family: "Playfair", serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 h1,
 h2,
@@ -86,7 +86,7 @@ input {
   background-color: #A3C5BE;
 }
 .co-midashiGreen h1{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #60A092;
   width: fit-content;
@@ -116,10 +116,10 @@ input {
   color: #000;
 }
 .co-midashi2sentBlack p:nth-child(1) {
-  font-size: 12px;
+  font-size: 13px;
 }
 .co-midashi2sentBlack p:nth-child(2) {
-  font-size: 18px;
+  font-size: 20px;
 }
 /* 子見出し 緑 */
 .co-komidashiGreen {
@@ -135,7 +135,7 @@ input {
   background-color: #A3C5BE;
 }
 .co-komidashiGreen h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -192,7 +192,7 @@ input {
 /* input項目のエラーメッセージ */
 .co-inputErrorMsg {
   color: red;
-  font-size: 12px;
+  font-size: 14px;
   text-align: start;
   padding-top: 3px;
 }
@@ -213,7 +213,7 @@ input {
 }
 .headerContent h1 {
   width: fit-content;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
 }
@@ -225,7 +225,7 @@ input {
   background-color: #fff;
 }
 .aboutCoastDescription p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -236,11 +236,11 @@ input {
 }
 /* section1 */
 .SimulatorCoastDescription {
-  font-size: 14px;
+  font-size: 16px;
 }
 .toMenseki {
   color: #7883FF;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #7883FF;
 }
 .toMenseki:hover {
@@ -255,7 +255,7 @@ input {
   margin-bottom: 50px;
 }
 .SimulatorCoastResultSection p{
-  font-size: 14px;
+  font-size: 16px;
 }
 /* section4 免責*/
 .mensekiContainer {
@@ -282,16 +282,17 @@ input {
 /* 結果 */
 /* 元本到達までの積立額 */
 .coastTumitateResultAmount .one {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #60A092;
+  margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
   border: 1px solid #60A092;
   padding: 10px 0;
 }
 .coastTumitateResultAmount .two {
-  font-size: 14px;
+  font-size: 16px;
   color: rgb(76, 127, 116);
 }
 .coastTumitateResultAmount .three {
@@ -299,10 +300,10 @@ input {
 }
 .coastTumitateResultAmount .four {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .coastTumitateResultAmount .five {
-  font-size: 14px;
+  font-size: 16px;
   color: #606060;
   text-align: end;
   margin-top: 10px;
@@ -320,16 +321,16 @@ input {
 }
 .torikuzushiAmountContent p:nth-child(1){
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 .torikuzushiAmountContent p:nth-child(2){
-  font-size: 16px;
+  font-size: 18px;
 }
 .about4perRule {
   color: #606060;
 }
 .about4perRule p {
-  font-size: 14px;
+  font-size: 16px;
 }
 .about4perRuleTitle {
   display: flex;
@@ -346,7 +347,7 @@ input {
   padding-bottom: 20px;
 }
 .mensekiContent h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 .mensekiContent ul {
@@ -354,7 +355,7 @@ input {
 }
 .mensekiContent li {
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
 }
 /* 免責ページ */
 .mensekiPage {
@@ -393,7 +394,7 @@ input {
   text-align: center;
 }
 .menuItems p {
-  font-size: 14px;
+  font-size: 16px;
   padding: 5px 10px;
   color: #606060;
 }

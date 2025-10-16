@@ -42,7 +42,7 @@ export default function InputItems() {
               <p className="inputItems">2. 運用中の資産額</p>
               <input
                 type="number"
-                placeholder="35"
+                placeholder="50"
                 {...register("currentAsset", {
                   required: "入力してください。",
                   min: {
