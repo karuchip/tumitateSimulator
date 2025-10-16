@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/common/header";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,22 +41,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
         {children}
 
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-K29NWP3NDG" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K29NWP3NDG');
+          `}
+        </Script>
+
         <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "コーストFIREシミュレーター",
-          "url": "https://tumitate-simulator.vercel.app/coastFirePage",
-          "applicationCategory": "FinanceApplication",
-          "operatingSystem": "All",
-          "description": "コーストFIRE達成に必要な積立額を計算できる無料シミュレーター。"
-        })}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "コーストFIREシミュレーター",
+            "url": "https://tumitate-simulator.vercel.app/coastFirePage",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All",
+            "description": "コーストFIRE達成に必要な積立額を計算できる無料シミュレーター。"
+          })}
         </script>
       </body>
     </html>
