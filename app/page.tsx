@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import AboutCoastFire from "./components/coastFireSection/aboutCoastFire";
 
 export default function Home() {
   return (
