@@ -38,6 +38,7 @@ type Props = {
   currentAgeYear: number;
   coastAge: number;
   finalAge: number;
+  tab: "stop" | "continue";
 };
 
 
@@ -66,7 +67,7 @@ interface AnnotationsPluginOptions {
   };
 }
 
-export default function CoastFireChart({ resultTumitate, currentAgeYear, coastAge, finalAge}: Props) {
+export default function CoastFireChart({ resultTumitate, currentAgeYear, coastAge, finalAge, tab}: Props) {
   const chartRef = useRef<Chart<"line", number[], string> | null>(null);
 
   const labels = resultTumitate.map((item) => item.age);
@@ -80,22 +81,24 @@ export default function CoastFireChart({ resultTumitate, currentAgeYear, coastAg
       {
         label: "資産額 (万円)",
         data: pv,
-        borderColor: "#ff6334ff",
-        backgroundColor: "#ff63341c",
+        borderColor: "#59CAB2",
+        backgroundColor: "#8bf9e184",
         borderWidth: 2,
         tension: 0.3,
         pointRadius: 0,
         fill: 'start',
+        order: 2,
       },
       {
         label: "投資額 (万円)",
         data: principal,
-        borderColor: "#2d5efdff",
-        backgroundColor: "#2d5efd34",
+        borderColor: "#ff6334ff",
+        backgroundColor: "rgba(253, 145, 112, 0.6)",
         borderWidth: 2,
         tension: 0.3,
         pointRadius: 0,
         fill: 'start',
+        order: 1,
       },
     ],
   };
@@ -123,7 +126,7 @@ export default function CoastFireChart({ resultTumitate, currentAgeYear, coastAg
       );
       chartInstance.update();
     }
-  }, [labels, coastAge]);
+  }, [labels, coastAge, tab]);
 
 
 

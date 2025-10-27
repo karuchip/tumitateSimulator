@@ -5,9 +5,11 @@ import {FormProvider, useForm} from "react-hook-form";
 import InputItems from "./input/inputItems";
 import { CalcTumitateAmount } from "@/src/function/coastFire/calcTumitateAmount";
 import { useRef, useState } from "react";
-import Menseki from "@/app/components/common/Menseki"
 import calcTumitateAmountGraphData from "@/src/function/coastFire/calcTumitateAmountGraphData";
 import TumitateResult from "./output/tumiateResult";
+import TorikuzushiResult from "./output/torikuzushiResult";
+import DummyTumitateResult from "./output/dummyTumitateResult";
+import DummyTorikuzushiResult from "./output/dummyTorikuzushiResult";
 
 
 
@@ -43,6 +45,12 @@ export default function CoastFireSimulation() {
   const [continueResult, setContinueResult] = useState<Array<{ age: number; principal: number; pv: number; }> | null>(null);
   // 入力値の保存
   const [lastInput, setLastInput] = useState<FireSimulationInput | null>(null);
+
+  // 積立額から取り崩し額へ渡す値の保存
+  // resultStopTumitateについて、老後資金受け取り年齢での総資産額
+  const [stopTotalAssetParent, setStopTotalAssetParent] = useState(0)
+  // resultContinueTumitateについて、老後資金受け取り年齢での総資産額
+  const [continueTotalAssetParent, setContinueTotalAssetParent] = useState(0)
 
 
   const onSubmit = (data: FireSimulationInput) => {
@@ -104,64 +112,90 @@ export default function CoastFireSimulation() {
 
 
   return (
-    <div>
-      <section className="SimulatorCoastContainer">
-        <div className="co-mobilePosition">
+    <>
+      <div className="SimulatorCoastContainer">
+        <div className="co-screenPosition">
           <div>
             <div className="co-midashi2sentBlackContainer">
               <span></span>
               <div className="co-midashi2sentBlack">
-                <p>毎月いくら積み立てればコーストFIREできる？？</p>
-                <p>積立金額シュミレーター</p>
+                <p>毎月いくら積み立てれば達成できる？？</p>
+                <p>コーストFIRE 積立金額シュミレーター</p>
               </div>
             </div>
 
             <p className="SimulatorCoastDescription">
               本シュミレーターでは、コーストFIRE達成に向けた、
-              <span className="co-Bold">一定額(必要元本)を貯めるまでの「毎月の積立額」</span>
+              一定額(必要元本)を貯めるまでの「毎月の積立額」
               を簡単にシミュレートできます。
+              <a href="#menseki" className="toMenseki">（免責事項をご確認ください）</a>
             </p>
-            <a href="#menseki" className="toMenseki">免責事項はこちら</a>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div style={{width:"100%", display: "flex", justifyContent:"center"}}>
+        {/* PC表示時、flex表示用div */}
+        <div className="co-pcFlex">
+          <div className="co-screenPositionInput">
+            <div>
+              {/* 入力 */}
+              <FormProvider {...methods}>
+                <form onSubmit={handleSubmit(onSubmit)}  className="SimulatorCoastContainerLeft">
+                  <div className="SimulatorCoastInputContainer">
+                    <InputItems/>
+                  </div>
+
+                  <div className="co-simulationButton">
+                    <button type="submit">
+                      この内容で<br/>シュミレーションする
+                    </button>
+                  </div>
+
+                </form>
+              </FormProvider>
+            </div>
           </div>
 
-          {/* 入力 */}
-          <FormProvider {...methods}>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="co-kakomiBlack">
-                <InputItems/>
-              </div>
 
-              <div className="co-simulationButton">
-                <button type="submit">
-                  この内容で<br/>シュミレーションする
-                </button>
-              </div>
+          {/* 結果 */}
+          {stopResult && continueResult && lastInput ?(
+            <section id="result" ref={resultRef}>
+              <TumitateResult
+                simulationResult={simulationResult}
+                lastInput={lastInput}
+                resultStopTumitate = {stopResult}
+                resultContinueTumitate = {continueResult}
+                setStopTotalAssetParent = {setStopTotalAssetParent}
+                setContinueTotalAssetParent = {setContinueTotalAssetParent}
+              />
+            </section>
+          ) : (
+            <DummyTumitateResult/>
+          )}
 
-            </form>
-          </FormProvider>
         </div>
-      </section>
+      </div>
 
-
-      {/* 結果 */}
-      {stopResult && continueResult && lastInput &&(
-        <section id="result" ref={resultRef} style={{paddingTop:"50px"}}>
-          <TumitateResult
-            simulationResult={simulationResult}
-            lastInput={lastInput}
-            resultStopTumitate = {stopResult}
-            resultContinueTumitate = {continueResult}
+      {/* 老後の取り壊し可能額 */}
+      {lastInput?.finalAge ? (
+        <div className="co-screenPosition callTorikuzushiComponent">
+          <TorikuzushiResult
+            finalAge={lastInput.finalAge}
+            stopTotalAsset={stopTotalAssetParent}
+            continueTotalAsset={continueTotalAssetParent}
           />
-        </section>
+        </div>
+      ) : (
+        <div className="co-screenPosition callTorikuzushiComponent">
+          <DummyTorikuzushiResult/>
+        </div>
       )}
 
-      <section className="mensekiContainer" id="menseki">
-        <div className="co-mobilePosition">
-          {/* 免責事項 */}
-          <Menseki/>
-        </div>
-      </section>
 
-    </div>
+    </>
   );
 }

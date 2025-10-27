@@ -7,12 +7,9 @@ export default function Home() {
   return (
 
     <>
-      <div className="menuContainer co-mobilePosition">
+      <div className="menuContainer">
 
-        {/* <AboutCoastFire/> */}
-
-        <div className="co-midashiGreen">
-          <span></span>
+        <div>
           <h1>シュミレーター一覧</h1>
         </div>
 

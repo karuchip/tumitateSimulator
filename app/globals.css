@@ -53,7 +53,7 @@ input {
   background-color: #fff;
   text-align: right;
   height: 30px;
-  width: 220px;
+  width: 210px;
   margin-right: 5px;
   padding-right: 10px;
 }
@@ -63,10 +63,44 @@ input {
 .co-headerBunSageru {
   margin-top: 50px;
 }
-/* モバイル位置 */
-.co-mobilePosition {
+/* PC・モバイル位置 */
+.co-screenPosition {
   width: 320px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .co-screenPosition {
+    width: 1000px;
+    margin: 30px auto;
+  }
+}
+.co-screenPositionInput {
+  width: 320px;
+  margin: 0 auto;
+}
+.co-screenPositionResult {
+  width: 320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .co-screenPositionResult {
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+/* PC表示時、flex表示用div */
+@media screen and (min-width:1024px) {
+  .co-pcFlex {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 1000px;
+  }
+}
+/* 文字サイズ */
+/* 12px */
+.co-12px {
+  font-size: 12px;
 }
 /* 太字 */
 .co-Bold {
@@ -74,21 +108,19 @@ input {
 }
 /* 見出し 緑*/
 .co-midashiGreen {
-  padding: 20px 0 10px 0;
+  padding: 0 0 10px 0;
   display: flex;
   gap: 10px;
   align-items: center;
-}
-.co-midashiGreen span {
-  display: block;
-  width: 5px;
-  height: 30px;
-  background-color: #A3C5BE;
+  padding: 10px;
+  background-color: #60A092;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .co-midashiGreen h1{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: #60A092;
+  color: #fff;
   width: fit-content;
 }
 /* 見出し 2行　黒 */
@@ -101,15 +133,19 @@ input {
 .co-midashi2sentBlackContainer span {
   display: block;
   width: 5px;
-  height: 50px;
+  height: 90px;
   background-color: #A3C5BE;
+}
+@media screen and (min-width: 1024px){
+  .co-midashi2sentBlackContainer span {
+    width: 10px;
+  }
 }
 .co-midashi2sentBlack::before {
   display: block;
   width: 5px;
   height: 30px;
   background-color: #A3C5BE;
-
 }
 .co-midashi2sentBlack p{
   font-weight: bold;
@@ -119,14 +155,24 @@ input {
   font-size: 13px;
 }
 .co-midashi2sentBlack p:nth-child(2) {
-  font-size: 20px;
+  font-size: 22px;
+}
+@media screen and (min-width: 1024px){
+  .co-midashi2sentBlack::before {
+    height: 60px;
+  }
+  .co-midashi2sentBlack p:nth-child(1) {
+    font-size: 14px;
+  }
+  .co-midashi2sentBlack p:nth-child(2) {
+    font-size: 34px;
+  }
 }
 /* 子見出し 緑 */
 .co-komidashiGreen {
   display: flex;
   gap: 5px;
   align-items: center;
-  margin: 10px 0;
 }
 .co-komidashiGreen span{
   display: block;
@@ -135,7 +181,7 @@ input {
   background-color: #A3C5BE;
 }
 .co-komidashiGreen h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -143,18 +189,17 @@ input {
 .co-kakomiGreen {
   border: 1px solid #A3C5BE;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
   background-color: #fff;
 }
+
 /* 囲み　黒 */
 .co-kakomiBlack {
-  border: 0.5px solid #606060;
+  border: 0.5px solid #cfcfcf;
   border-radius: 10px;
   padding: 20px 30px 0 30px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
   background-color: #fff;
-  margin: 20px 0 5px 0;
 }
 /* ボタン類 */
 /* シュミレーションボタン */
@@ -165,22 +210,33 @@ input {
   z-index: 1;
 }
 .co-simulationButton button{
-  border: 0.5px solid #606060;
+  /* border: 0.5px solid #606060; */
   border-radius: 5px;
   padding: 3px 20px;
-  background-color: #60A092;
+  background-color: #ff7d55;
   color: #fff;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   position:absolute;
   top: 0;
   z-index: 1;
+  width: fit-content;
 }
 .co-simulationButton button:hover {
   top: 5px;
   box-shadow: none;
-  background-color: #4d8478
+  background-color: #f3987d;
+}
+@media screen and (min-width:1024px) {
+  .co-simulationButton button{
+    top: 20px;
+    width: 100%;
+    margin: 0;
+  }
+  .co-simulationButton button:hover {
+    top: 25px;
+  }
 }
 /* input項目の単位 */
 .co-inputUnit {
@@ -192,7 +248,8 @@ input {
 /* input項目のエラーメッセージ */
 .co-inputErrorMsg {
   color: red;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
   text-align: start;
   padding-top: 3px;
 }
@@ -221,81 +278,136 @@ input {
 
 /* コーストFIREとは app/components/coastFireSection/aboutCoastFire.tsx */
 .aboutCoastContainer {
-  padding: 30px 0 40px 0;
-  background-color: #fff;
+ margin-bottom: 60px;
+}
+.aboutCoastContent {
+  padding: 20px;
 }
 .aboutCoastDescription p {
   font-size: 16px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .aboutCoastContainer {
+    margin-bottom: 80px;
+  }
+  .aboutCoastDescription p {
+    padding-left: 40px;
+  }
 }
 
 
 /* 積立金額シュミレーター app/components/coastFireSection/coastFireSimulation.tsx */
 .SimulatorCoastContainer {
-  background-color: #E6F2F0;
-  padding: 30px 0 120px 0;
+  background-color: #fff;
+  padding: 30px 0;
+}
+.SimulatorCoastContainerLeft {
+  margin-bottom: 150px; /* 結果と取り崩しの間のスペース */
+}
+@media screen and (min-width:1024px) {
+  .SimulatorCoastContainer {
+    background-color: #fff;
+  }
+  .SimulatorCoastContainerLeft {
+    margin-bottom: 80px;
+  }
 }
 /* section1 */
 .SimulatorCoastDescription {
   font-size: 16px;
+  margin: 10px 0;
+}
+@media screen and (min-width:1024px) {
+  .SimulatorCoastDescription {
+    font-size: 18px;
+  }
 }
 .toMenseki {
   color: #7883FF;
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid #7883FF;
 }
 .toMenseki:hover {
   color: #3343f4;
   border-bottom: 1px solid #3343f4;
 }
-/* section3 結果*/
-.SimulatorCoastResult {
-  padding: 20px 0 40px 0;
+/* section2 入力 */
+.SimulatorCoastInputContainer {
+  background-color: #f8fafc;
+  border: 1px solid #E5E7EB;
+  padding: 20px 30px;
 }
+/* section3 結果*/
 .SimulatorCoastResultSection {
-  margin-bottom: 50px;
+  padding: 20px;
 }
 .SimulatorCoastResultSection p{
   font-size: 16px;
 }
+/* torikuzushi呼び出し */
+.callTorikuzushiComponent {
+  margin: 40px auto;
+}
+@media screen and (min-width: 1024px) {
+  .callTorikuzushiComponent {
+    margin: 40px auto;
+  }
+}
 /* section4 免責*/
 .mensekiContainer {
   background-color: #E6F2F0;
-  padding: 20px 0 100px 0;
+  padding: 60px 0 60px 0;
 }
 
 
 /* 入力画面 app/components/coastFireSection/input/inputItems.tsx */
 .InputContainer h3{
   font-weight: bold;
+  color:#60A092;
+  border-bottom: 1px solid #60A092;
+  width: fit-content;
 }
 .InputYourSituation {
   margin: 10px 0;
 }
 .inputItems {
-  margin-top:  20px;
-  margin-bottom: 5px;
+  margin-top:  15px;
+  margin-bottom: 3px;
 }
 .yourGoal {
-  margin: 40px 0;
+  margin: 40px 0 0 0;
 }
 
 /* 結果 */
 /* 元本到達までの積立額 */
+.coastTumitateResultAmount {
+  padding: 10px 10px 30px 10px;
+}
+@media screen and (min-width: 1024px) {
+  .coastTumitateResultAmount {
+    padding: 0 30px 10px 30px;
+  }
+}
 .coastTumitateResultAmount .one {
   font-size: 20px;
   font-weight: bold;
-  color: #60A092;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: #4d8478;
+  margin: 10px 0;
   text-align: center;
-  border: 1px solid #60A092;
+  border: 2px solid #4d8478;
   padding: 10px 0;
 }
 .coastTumitateResultAmount .two {
   font-size: 16px;
-  color: rgb(76, 127, 116);
+  color: #000;
 }
-.coastTumitateResultAmount .three {
+@media screen and (min-width: 1024px) {
+  .coastTumitateResultAmount .two {
+    font-size: 16px;
+  }
+}
+.coastTumitateResultAmount .graph {
   margin-top: 20px;
 }
 .coastTumitateResultAmount .four {
@@ -308,10 +420,39 @@ input {
   text-align: end;
   margin-top: 10px;
 }
+.shisansuiiContainer {
+  margin-top: 10px;
+}
 
 /* 取り崩し */
+.torikuzushiRight {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(182, 182, 182, 0.1);
+  background-color: #fff;
+  border: 0.5px solid #cfcfcf;
+  margin-top: 20px;
+}
+@media screen and (min-width:1024px) {
+  .torikuzushiFlexBox {
+    display: flex;
+    justify-content: center;
+    gap:40px;
+  }
+  .torikuzushiLeft {
+    width: 540px;
+    margin: 0;
+  }
+  .torikuzushiRight {
+    width: 320px;
+    margin:0;
+  }
+}
+.torikuzushiAmountDescription {
+  margin-top: 10px;
+}
 .torikuzushiAmountContent {
-  border: 1px solid #60A092;
+  /* border: 1px solid #60A092; */
   background-color: #fff;
   padding: 5px 0;
 }
@@ -330,14 +471,20 @@ input {
   color: #606060;
 }
 .about4perRule p {
-  font-size: 16px;
+  font-size: 14px;
 }
+@media screen and (min-width: 1024px) {
+  .about4perRule p {
+    font-size: 16px;
+  }
+}
+
 .about4perRuleTitle {
   display: flex;
   justify-content: left;
   gap:5px;
   align-items: center;
-  margin: 30px 0 10px 0;
+  margin-bottom: 10px;
 }
 
 /* 免責事項 app/components/common/Menseki.tsx */
@@ -345,6 +492,11 @@ input {
   text-align: center;
   color: #606060;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .mensekiContent {
+    padding: 20px 60px;
+  }
 }
 .mensekiContent h3 {
   font-size: 18px;
@@ -367,6 +519,12 @@ input {
 /* メニュー */
 .menuContainer {
   padding-top: 80px;
+  width: 320px;
+  margin: 0px auto;
+}
+.menuContainer h1 {
+  width: fit-content;
+  font-weight: bold;
 }
 .menuItemContainer {
   margin-top: 10px;
