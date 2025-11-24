@@ -37,7 +37,7 @@ const SavingResultSection = ({result, duration}: Props) => {
               {result.finalSavingAmount}万円
             </p>
             <p className="two twoGreen">
-              途中で貯金がマイナスに転じる時期はありますが、最終的には{duration}ヶ月後に{result.finalSavingAmount}万円の残高となる試算結果です。支出調整によって改善が見込めます。
+              途中で貯金がマイナスに転じる時期はありますが、最終的には{duration}ヶ月後に、{result.finalSavingAmount}万円の残高となる試算結果です。支出調整によって改善が見込めます。
             </p>
           </div>
         )}
@@ -54,7 +54,7 @@ const SavingResultSection = ({result, duration}: Props) => {
                   {result.finalSavingAmount}万円
                 </p>
                 <p className="two twoRed">
-                  {runningOutMonth}ヶ月目で貯金が底をつき、最終的には{shortfall}万円の不足が生じる見込みです。早めに支出を調整して備えておきましょう。
+                  {runningOutMonth}ヶ月目で貯金が底をつき、最終的には{duration}ヶ月後に、{shortfall}万円の不足が生じる見込みです。早めに支出を調整して備えておきましょう。
                 </p>
               </div>
             );
