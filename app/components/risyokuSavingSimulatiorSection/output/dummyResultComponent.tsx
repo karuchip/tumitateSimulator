@@ -5,14 +5,19 @@ import SavingResultSection from "./savingResultSection"
 import TableResult from "./tableResult"
 import ChartResult from "./chartResult"
 
-type Props = {
-  result: RisyokuSavingSimulationOutput
-}
 
-const ResultComponent = ({result}:Props) => {
 
-  const duration:number = result.resultSavingArray.length+1;
-  return(
+const dummyResultComponent = () => {
+
+  // ダミーデータ
+  const duration:number = 1;
+  const result: RisyokuSavingSimulationOutput = {
+    resultSavingArray: Array.from({ length: duration }, () => 0),
+    finalSavingAmount: 0,
+    savingState: "yes",
+  };
+
+  return (
     <>
       <div className="SimulatorCoastResult co-kakomiGreen">
         <div className="co-midashiGreen">
@@ -42,7 +47,6 @@ const ResultComponent = ({result}:Props) => {
               <TableResult result={result}/>
             </div>
 
-
           </div>
 
 
@@ -52,4 +56,4 @@ const ResultComponent = ({result}:Props) => {
     </>
   )
 }
-export default ResultComponent
+export default dummyResultComponent

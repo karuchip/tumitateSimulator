@@ -89,12 +89,16 @@ input {
   }
 }
 /* PC表示時、flex表示用div */
+.co-pcFlex {
+  display: block;
+}
 @media screen and (min-width:1024px) {
   .co-pcFlex {
     display: flex;
     justify-content: center;
     gap: 60px;
     width: 1000px;
+    margin: 0 auto;
   }
 }
 /* 文字サイズ */
@@ -203,6 +207,7 @@ input {
 }
 /* ボタン類 */
 /* シュミレーションボタン */
+/* メインボタン */
 .co-simulationButton {
   display: flex;
   justify-content: center;
@@ -228,6 +233,45 @@ input {
   box-shadow: none;
   background-color: #f3987d;
 }
+/* サブボタン */
+.co-simulationButton2 {
+  display: flex;
+}
+.co-simulationButton2 button{
+  border-radius: 5px;
+  padding: 1px 10px;
+  background-color: #89C0F4;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  width: fit-content;
+  margin: 10px 0 15px 0;
+}
+.co-simulationButton2 button:hover {
+  background-color: #468cce;
+}
+.co-simulationButton3 {
+  display: flex;
+  z-index: 1;
+  justify-content: end;
+}
+.co-simulationButton3 button{
+  border-radius: 5px;
+  padding: 1px 10px;
+  background-color: #F48989;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  top: 0;
+  z-index: 1;
+  width: fit-content;
+  margin: 10px 0 15px 0;
+}
+.co-simulationButton3 button:hover {
+  background-color: #dd5151;
+}
 @media screen and (min-width:1024px) {
   .co-simulationButton button{
     top: 20px;
@@ -248,10 +292,60 @@ input {
 /* input項目のエラーメッセージ */
 .co-inputErrorMsg {
   color: red;
-  font-size: 12px;
+  font-size: 12px !important;
   font-weight: bold;
   text-align: start;
   padding-top: 3px;
+}
+/* アイコン類(離職シュミレーター) */
+/* グリーンアイコン */
+.co-iconGreen {
+  width: 14px;
+  height: 14px;
+  background-color: #59CAB2;
+  border-radius: 50%;
+}
+/* レッドアイコン */
+.co-iconRed {
+  width: 14px;
+  height: 14px;
+  background-color: #F48989;
+  border-radius: 50%;
+  position: relative;
+}
+.co-iconRed span {
+  width: 8px !important;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  top: 6px;
+  left: 3px;
+}
+/* ブルーアイコン */
+.co-iconBlue {
+  width: 14px !important;
+  height: 14px;
+  background-color: #468cce;
+  border-radius: 50%;
+  position: relative;
+}
+.co-iconBlue span:nth-child(1) {
+  width: 8px !important;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  top: 6px;
+  left: 3px;
+}
+.co-iconBlue span:nth-child(2) {
+  width: 2px;
+  height: 8px;
+  background-color: #fff;
+  position: absolute;
+  top: 3px;
+  left: 6px;
 }
 
 
@@ -402,6 +496,7 @@ input {
   font-size: 16px;
   color: #000;
 }
+
 @media screen and (min-width: 1024px) {
   .coastTumitateResultAmount .two {
     font-size: 16px;
@@ -526,21 +621,22 @@ input {
   width: fit-content;
   font-weight: bold;
 }
-.menuItemContainer {
+/* .menuItemContainer {
   margin-top: 10px;
-}
-.menuItemsContent {
+} */
+/* .menuItemsContent {
   position: relative;
-}
+} */
 .menuItems {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   border: 1px solid #60A092;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  margin-top: 30px;
 }
 .menuItems:hover {
-  top: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 .menuItems h2 {
   font-weight: bold;
@@ -555,4 +651,127 @@ input {
   font-size: 16px;
   padding: 5px 10px;
   color: #606060;
+}
+
+
+/* 離職期間の貯金推移シュミレーター */
+/* (app/components/risyokuSavingSimulatiorSection/input/inputItems.tsx) */
+.risyokuSavingInputYourSituation {
+  margin: 20px 0;
+}
+.risyokuSavingInputYourSituation input {
+  width: 250px;
+  padding-right: 40px;
+  font-weight: bold;
+}
+.risyokuYourSituationLabel {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.risyokuYourSituationLabel p{
+  font-weight: bold;
+  font-size: 14px;
+}
+.risyokuSavingInputRelative {
+  position: relative;
+}
+.risyokuSavingInputRelative span {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 35px;
+  color:#606060;
+  font-size: 14px;
+}
+.risyokuSavingInputExtraIncome {
+  display: flex;
+  align-items: center;
+}
+.risyokuSavingInputExtraIncome p {
+  width: 70px;
+}
+.risyokuSavingInputExtraIncome input {
+  width: 180px;
+}
+.risyokuSavingInputExtraIncome span {
+  top: 7px;
+}
+.risyokuSavingInputFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+/* 離職期間の結果表 */
+/* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
+.risyokuResultAmount .one {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px 0;
+}
+.oneGreen {
+  color: #4d8478;
+  border: 2px solid #4d8478;
+  background-color: #E6F2F0;
+}
+.oneRed {
+  color: #F48989;
+  border: 2px solid #F48989;
+  background-color: #FFF5F5;
+}
+.oneGreenRed {
+  color: #4d8478;
+  border: 2px solid #4d8478;
+  background-color: #FFF5F5;
+}
+.risyokuResultAmount .two {
+  font-size: 16px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.twoGreen {
+  color: #4d8478;
+}
+.twoRed {
+  color: #F48989;
+}
+/* app/components/risyokuSavingSimulatiorSection/output/tableResult.tsx */
+.marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.marker-green {
+  background-color: #6FC7B3;
+}
+.marker-red {
+  background-color: #E07A7A;
+}
+.bg {
+  background-color: #F2F8F6;
+}
+.saving-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #8BB0A0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.saving-table th {
+  background-color: #8BB0A0;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+.saving-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #D9E7E2;
+}
+.tdRisyokuPosition {
+  text-align: center;
 }

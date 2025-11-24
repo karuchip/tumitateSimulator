@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import WarningIcon from '@mui/icons-material/Warning';
 import TollIcon from '@mui/icons-material/Toll';
 import HomeIcon from '@mui/icons-material/Home';
+import HotelIcon from '@mui/icons-material/Hotel';
 import Link from 'next/link';
 
 export default function TemporaryDrawer() {
@@ -51,6 +52,21 @@ export default function TemporaryDrawer() {
                 <TollIcon />
               </ListItemIcon>
               コーストFIRE 積立金額シュミレーター
+              <ListItemText/>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+      </List>
+
+
+      <List>
+        <ListItem disablePadding>
+          <Link href={"/risyokuSavingSimulatiorPage"}>
+            <ListItemButton>
+              <ListItemIcon>
+                <HotelIcon />
+              </ListItemIcon>
+              離職期間の貯金推移シュミレーター
               <ListItemText/>
             </ListItemButton>
           </Link>
