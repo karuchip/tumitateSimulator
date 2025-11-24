@@ -23,6 +23,15 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="menuItemsContent">
+            <div className="menuItems">
+              <Link href="/risyokuSavingSimulatiorPage">
+                <h2>離職期間の貯金推移シュミレーター</h2>
+                <p>今の資産・支出・収入から「あと何ヶ月貯金が持つ？」をシュミレートします。</p>
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </>
