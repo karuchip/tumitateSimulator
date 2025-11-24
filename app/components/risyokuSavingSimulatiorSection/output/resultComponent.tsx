@@ -11,7 +11,7 @@ type Props = {
 
 const ResultComponent = ({result}:Props) => {
 
-  const duration:number = result.resultSavingArray.length+1;
+  const duration:number = result.resultSavingArray.length;
   return(
     <>
       <div className="SimulatorCoastResult co-kakomiGreen">
