@@ -11,7 +11,7 @@ type PropsType = {
   monthlyPMT: number,
   r_monthly: number,
   currentAsset: number;
-  currentAge: number;
+  age: number;
 }
 
 const CalcCoastAge = ({
@@ -22,11 +22,14 @@ const CalcCoastAge = ({
   monthlyPMT,
   r_monthly,
   currentAsset,
-  currentAge
+  age: currentAge
 }:PropsType) => {
+
+  console.log("second呼び出された！")
 
   // coastFire達成しない場合 (老後までに目標資金が貯まらない場合)
 	if (lastPV < requiredRetirementMoney) {
+    console.log("老後までに目標資金が貯まらない場合です");
     return { coastFireAge:null, achievedResult:null };
   }
 
@@ -42,6 +45,7 @@ const CalcCoastAge = ({
 
     // ①コーストFire時の年齢
     if (futurePV > requiredRetirementMoney) {
+      console.log("①コーストFire時の年齢")
       const coastFireAge = result[i].age;
 
       // ②資産推移を求める
@@ -60,6 +64,8 @@ const CalcCoastAge = ({
           totalPrincipalStop += monthlyPMT * 12;
         }
 
+        console.log("coastFireまで積立あり");
+
         achievedResult.push({ age, principal: totalPrincipalStop, pv: totalPVStop })
       }
 
@@ -68,12 +74,14 @@ const CalcCoastAge = ({
         for (let month = 1; month <= 12; month++) {
           totalPVStop = growMonthlyPVnoPMT(totalPVStop, r_monthly)
         }
-
+        console.log("coastFire以降は積立なし");
         achievedResult.push({ age, principal: totalPrincipalStop, pv: totalPVStop })
       }
 
       return {coastFireAge, achievedResult};
 
+    }else {
+      console.log("呼び出されていない！")//ここが問題！！！解消する(12/7)
     }
   }
   return {coastFireAge: null, achievedResult:null}
