@@ -15,7 +15,8 @@ export default function CalcTrajectory(input: InputProps): { result: OutputProps
     retiredAge,
   } = input;
 
-  // 月利
+  if (retiredAge <= age) throw new Error("「老後資金を受け取りたい年齢」 は 「現在の年齢」 より大きくしてください");
+
 	const r_monthly = Math.pow(1 + rate, 1 / 12) -1;
 
 	//結果を入れる配列

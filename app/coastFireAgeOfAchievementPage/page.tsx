@@ -7,10 +7,10 @@ const CoastFireAgeOfAchievement = () => {
   const inputs = {
     age: 40,
     currentAsset: 100,
-    monthlyPMT: 10, //積立額
+    monthlyPMT: 1, //積立額
     rate: 0.05,
-    requiredRetirementMoney: 2000,
-    retiredAge: 65,
+    requiredRetirementMoney: 800,
+    retiredAge: 60,
   }
 
   const {
