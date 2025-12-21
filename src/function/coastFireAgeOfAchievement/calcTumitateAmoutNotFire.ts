@@ -1,3 +1,4 @@
+
 import { CalcMonthsBetween } from "../common/calcMonthsBetween";
 
 // 実用版（FV を引数にする、毎月先頭に積立するバージョン）
@@ -11,13 +12,12 @@ type CalcTumitateAmountParams = {
 };
 
 type tumitateAmountProps = {
-  pvNeeded: number;
-  pvFuture: number;
   monthlyPMT: number;
-  monthsToSave: number;
+  manyen: number | null;
+  senyen: number | null;
 }
 
-export function CalcTumitateAmount({
+export function CalcTumitateAmountNotFire({
   currentAgeYear,
   coastAge,
   finalAge,
@@ -27,7 +27,6 @@ export function CalcTumitateAmount({
 }: CalcTumitateAmountParams): tumitateAmountProps {
 
   if (coastAge <= currentAgeYear) throw new Error("「積立をやめる予定の年齢」 は 「現在の年齢」 より大きくしてください");
-  if (finalAge <= coastAge) throw new Error("「老後資金を受け取りたい年齢」 は 「積立をやめる予定の年齢」 より大きくしてください");
 
   // 年利
   const r = annualReturn;
@@ -51,7 +50,7 @@ export function CalcTumitateAmount({
   // 追加で作るべき将来価値(coastAge時点で)
   const S = pvNeeded - pvFuture
 
-  // 必要な月額積立 (毎月先頭積立 = annuity due)
+  // 必要な月額積立 (毎月末積立)
   let monthlyPMT = 0;
   // もしS>0なら積立で埋める。　s<=0ならすでに達成済み(monthlyPMT = 0)
   if(S > 0) {
@@ -68,10 +67,9 @@ export function CalcTumitateAmount({
 
 
   return {
-    pvNeeded,      // 達成年齢時点で必要な資産
-    pvFuture,      // 現在資産が達成年齢時点で育った額
     monthlyPMT,    // 達成のために必要な毎月の積立額（円）
-    monthsToSave: monthsToCoast,  //coastFire達成までの月数
+    manyen: Math.floor(monthlyPMT) || null,
+    senyen: Math.floor((monthlyPMT - Math.floor(monthlyPMT)) * 10) * 1000
+    // senyen: Math.floor((monthlyPMT - Math.floor(monthlyPMT))*10000) || null
   };
 }
-

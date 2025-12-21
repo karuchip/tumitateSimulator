@@ -16,6 +16,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import TollIcon from '@mui/icons-material/Toll';
 import HomeIcon from '@mui/icons-material/Home';
 import HotelIcon from '@mui/icons-material/Hotel';
+import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import Link from 'next/link';
 
 export default function TemporaryDrawer() {
@@ -52,6 +53,20 @@ export default function TemporaryDrawer() {
                 <TollIcon />
               </ListItemIcon>
               コーストFIRE 積立金額シュミレーター
+              <ListItemText/>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+      </List>
+
+      <List>
+        <ListItem disablePadding>
+          <Link href={"/coastFireAgeOfAchievementPage"}>
+            <ListItemButton>
+              <ListItemIcon>
+                <DirectionsRunIcon />
+              </ListItemIcon>
+              コーストFIRE 達成年齢シュミレーター
               <ListItemText/>
             </ListItemButton>
           </Link>

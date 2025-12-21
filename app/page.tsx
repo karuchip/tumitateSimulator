@@ -25,6 +25,15 @@ export default function Home() {
 
           <div className="menuItemsContent">
             <div className="menuItems">
+              <Link href="/coastFirePage">
+                <h2>コーストFIRE達成年齢シュミレーター</h2>
+                <p>今の積立額でコーストFIREを達成可能か？をシュミレートできます。</p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="menuItemsContent">
+            <div className="menuItems">
               <Link href="/risyokuSavingSimulatiorPage">
                 <h2>離職期間の貯金推移シュミレーター</h2>
                 <p>今の資産・支出・収入から「あと何ヶ月貯金が持つ？」をシュミレートします。</p>
