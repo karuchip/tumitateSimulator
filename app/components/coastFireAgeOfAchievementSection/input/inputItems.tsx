@@ -4,7 +4,8 @@ import {useFormContext, Controller} from "react-hook-form"
 export default function InputItems() {
   const {control, register, watch, formState: {errors}} = useFormContext();
 
-  const rate = watch("rate")
+  const rate = watch("rate");
+  const age = watch("age");
 
   return(
     <>
@@ -15,7 +16,7 @@ export default function InputItems() {
           <div className="InputYourSituation">
 
             <label>
-              <p className="inputItems">1. 現在の年齢</p>
+              <p className="inputItems">現在の年齢</p>
               <input
                 type="number"
                 placeholder="30"
@@ -24,6 +25,10 @@ export default function InputItems() {
                   min: {
                     value: 0,
                     message: "0以上の数を入力してください。"
+                  },
+                  max: {
+                    value: 120,
+                    message: "120以下の年齢を入力してください。"
                   },
                   validate: {
                     maxLength: (value) =>
@@ -39,7 +44,7 @@ export default function InputItems() {
             </label>
 
             <label>
-              <p className="inputItems">2. 運用中の資産額</p>
+              <p className="inputItems">運用中の資産額</p>
               <input
                 type="number"
                 placeholder="50"
@@ -63,7 +68,7 @@ export default function InputItems() {
             </label>
 
             <label>
-              <p className="inputItems">3. 月の積立額</p>
+              <p className="inputItems">月の積立額</p>
               <input
                 type="number"
                 placeholder="3"
@@ -88,7 +93,7 @@ export default function InputItems() {
 
             {/* 運用利回り */}
             <label>
-              <p className="inputItems">3. 運用利回り(年率)</p>
+              <p className="inputItems">運用利回り(年率)</p>
 
               <Controller
                 name="rate"
@@ -120,7 +125,7 @@ export default function InputItems() {
 
           <div>
             <label>
-              <p className="inputItems">1. 老後に必要な資金</p>
+              <p className="inputItems">老後に必要な資金</p>
               <input
                 type="number"
                 placeholder="2,000"
@@ -144,15 +149,19 @@ export default function InputItems() {
             </label>
 
             <label>
-              <p className="inputItems">2. 老後資金を受け取りたい年齢</p>
+              <p className="inputItems">老後資金を受け取りたい年齢</p>
               <input
                 type="number"
                 placeholder="65"
                 {...register("retiredAge", {
                   required: "入力してください。",
                   min: {
-                    value: 0,
-                    message: "0以上の数を入力してください。"
+                    value: age + 1,
+                    message: "年齢より大きい数を入力してください。"
+                  },
+                  max: {
+                    value: 120,
+                    message: "120以下の年齢を入力してください。"
                   },
                   validate: {
                     maxLength: (value) =>

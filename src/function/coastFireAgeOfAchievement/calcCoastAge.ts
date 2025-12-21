@@ -25,7 +25,6 @@ const CalcCoastAge = ({
   age: currentAge
 }:PropsType) => {
 
-  console.log(`lastPV:${lastPV}`)
 
   // coastFire達成しない場合 (老後までに目標資金が貯まらない場合)
 	if (lastPV < requiredRetirementMoney) {
@@ -43,14 +42,13 @@ const CalcCoastAge = ({
     // 現資産を運用した場合の未来の総資産額
     const futurePV = thisYearPV * Math.pow(1 + r_monthly, monthlyLeft);
 
-    console.log(`thisYearPV: ${thisYearPV}`);
-    console.log(`monthlyLeft: ${monthlyLeft}`);
-    console.log(`requiredRetirementMoney: ${requiredRetirementMoney}`);
-    console.log(`futurePV: ${futurePV}`);
+    // console.log(`thisYearPV: ${thisYearPV}`);
+    // console.log(`monthlyLeft: ${monthlyLeft}`);
+    // console.log(`requiredRetirementMoney: ${requiredRetirementMoney}`);
+    // console.log(`futurePV: ${futurePV}`);
 
     // ①コーストFire時の年齢
     if (futurePV >= requiredRetirementMoney) {
-      console.log("①コーストFire時の年齢")
       const coastFireAge = result[i].age;
 
       // ②資産推移を求める
@@ -69,8 +67,6 @@ const CalcCoastAge = ({
           totalPrincipalStop += monthlyPMT * 12;
         }
 
-        console.log("coastFireまで積立あり");
-
         achievedResult.push({ age, principal: totalPrincipalStop, pv: totalPVStop })
       }
 
@@ -79,7 +75,6 @@ const CalcCoastAge = ({
         for (let month = 1; month <= 12; month++) {
           totalPVStop = growMonthlyPVnoPMT(totalPVStop, r_monthly)
         }
-        console.log("coastFire以降は積立なし");
         achievedResult.push({ age, principal: totalPrincipalStop, pv: totalPVStop })
       }
 

@@ -30,11 +30,9 @@ const RisyokuSavingSimulator = () => {
   // シュミレーションボタン押下時、計算呼び出し
   const onSubmit = (data: RisyokuSavingSimulationInput) => {
 
-    console.log(`dataは、${data}`);
     try {
       const simulationResult = SimulateSavings(data);
       setResult(simulationResult)
-      console.log(`計算結果は、${simulationResult}`);
 
       // スクロール
       setTimeout(() => {

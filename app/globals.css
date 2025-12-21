@@ -77,6 +77,7 @@ input {
 .co-screenPositionInput {
   width: 320px;
   margin: 0 auto;
+  /* height: 600px; */
 }
 .co-screenPositionResult {
   width: 320px;
@@ -774,4 +775,31 @@ input {
 }
 .tdRisyokuPosition {
   text-align: center;
+}
+
+
+/* コーストFIRE達成年齢シュミレーター app/coastFireAgeOfAchievementPage/page.tsx() */
+.ageGraphContainer {
+  width: 320px;
+  margin: 0 auto;
+  height: auto;
+}
+@media screen and (min-width: 700px) {
+  .ageGraphContainer {
+    width: 600px;
+    height: auto;
+  }
+}
+.ageResultContainer {
+  height: 640px;
+}
+@media screen and (max-width: 1023px){
+  .ageResultContainer {
+    margin: 0 20px;
+  }
+}
+.co-screenPositionInputAge {
+  width: 320px;
+  margin: 0 auto;
+  height: 640px;
 }
