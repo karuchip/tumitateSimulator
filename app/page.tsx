@@ -9,7 +9,7 @@ export default function Home() {
       <div className="menuContainer">
 
         <div>
-          <h1>シュミレーター一覧</h1>
+          <h1>コーストFIREシミュレーター｜毎月いくらで達成できる？</h1>
         </div>
 
         <div className="menuItemContainer">
