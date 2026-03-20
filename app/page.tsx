@@ -25,7 +25,7 @@ export default function Home() {
 
           <div className="menuItemsContent">
             <div className="menuItems">
-              <Link href="/coastFireAgeOfAchievementPage">
+              <Link href="/coast-fire-age">
                 <h2>コーストFIRE達成年齢シュミレーター</h2>
                 <p>今の積立額でコーストFIREを達成可能か？をシュミレートできます。</p>
               </Link>

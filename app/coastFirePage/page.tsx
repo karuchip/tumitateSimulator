@@ -1,26 +1,15 @@
-"use client"
-import AboutCoastFire from "../components/coastFireSection/aboutCoastFire";
-// import AboutCoastFire from "@/app/components/coastFireSection/aboutCoastFire"
-import CoastFireSimulation from "../components/coastFireSection/simulation";
-import Menseki from "../components/common/Menseki";
+import CoastFirePageClient from "./coastFirtePageClient";
+
+// seo
+export const metadata = {
+  title: "コーストFIREに必要な積立額はいくら？｜無料シミュレーター",
+  description:
+    "コーストFIREを達成するために毎月いくら積み立てればよいかを簡単に計算できる無料シミュレーターです。必要元本や利回りをもとに、最適な積立額をシミュレーションできます。",
+};
 
 export default function CoastFirePage() {
 
   return (
-    <div className="co-headerBunSageru">
-
-      <section>
-        <CoastFireSimulation/>
-        <AboutCoastFire/>
-      </section>
-
-      <section className="mensekiContainer" id="menseki">
-        <div className="co-screenPosition">
-          {/* 免責事項 */}
-          <Menseki/>
-        </div>
-      </section>
-
-    </div>
+    <CoastFirePageClient/>
   );
 }

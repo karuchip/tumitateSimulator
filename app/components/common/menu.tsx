@@ -61,7 +61,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/coastFireAgeOfAchievementPage"}>
+          <Link href={"/coast-fire-age"}>
             <ListItemButton>
               <ListItemIcon>
                 <DirectionsRunIcon />
