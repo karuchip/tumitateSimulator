@@ -88,7 +88,7 @@ const RisyokuSavingSimulator = () => {
                   </div>
 
                   <div className="co-simulationButton">
-                    <button type="submit">この内容で<br/>シュミレーションする</button>
+                    <button type="submit">シュミレーションする</button>
                   </div>
                 </form>
               </FormProvider>

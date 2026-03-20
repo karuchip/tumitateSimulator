@@ -12,7 +12,6 @@ import DummyTumitateResult from "./output/dummyTumitateResult";
 import DummyTorikuzushiResult from "./output/dummyTorikuzushiResult";
 
 
-
 export default function CoastFireSimulation() {
 
   // シュミレーション後のページ遷移用
@@ -120,7 +119,7 @@ export default function CoastFireSimulation() {
               <span></span>
               <div className="co-midashi2sentBlack">
                 <p>毎月いくら積み立てれば達成できる？？</p>
-                <p>コーストFIRE 積立金額シュミレーター</p>
+                <h1>コーストFIREに必要な積立額はいくら？</h1>
               </div>
             </div>
 
@@ -151,7 +150,7 @@ export default function CoastFireSimulation() {
 
                   <div className="co-simulationButton">
                     <button type="submit">
-                      この内容で<br/>シュミレーションする
+                      シュミレーションする
                     </button>
                   </div>
 
