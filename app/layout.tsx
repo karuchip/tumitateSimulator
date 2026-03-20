@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "コーストFIREシミュレーター",
     description:
       "コーストFIRE達成までの積立金額を簡単に計算できる無料アプリです。",
-    url: "https://tumitate-simulator.vercel.app/coastFirePage",
+    url: "https://tumitate-simulator.vercel.app",
     siteName: "コーストFIREシミュレーター",
     locale: "ja_JP",
     type: "website",
