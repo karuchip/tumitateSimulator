@@ -64,7 +64,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                   <div className="maitukinotumitategakuContainer">
                     <div className="co-komidashiGreen">
                       <span></span>
-                      <h3>毎月の積立額</h3>
+                      <h3>達成に必要な毎月の積立額</h3>
                     </div>
 
                     <div className="coastTumitateResultAmount">

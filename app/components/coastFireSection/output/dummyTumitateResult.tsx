@@ -24,7 +24,7 @@ const DummyTumitateResult = () => {
             <div className="maitukinotumitategakuContainer">
               <div className="co-komidashiGreen">
                 <span></span>
-                <h3>毎月の積立額</h3>
+                <h3>達成に必要な積立額</h3>
               </div>
 
 

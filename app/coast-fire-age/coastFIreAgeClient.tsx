@@ -5,11 +5,12 @@ import { FormProvider } from "react-hook-form";
 import { InputProps } from "@/src/type/CoastFireAgeOfAchievement/input";
 import { OutputProps } from "@/src/type/CoastFireAgeOfAchievement/output"
 import {useForm} from "react-hook-form"
-import InputItems from "@/app/components/coastFireAgeOfAchievementSection/input/inputItems"
+import InputItems from "@/app/components/coast-fire-age/input/inputItems"
 import { useState, useEffect, useMemo } from "react";
-import CoastFireChart from "@/app/components/coastFireAgeOfAchievementSection/output/graph"
+import CoastFireChart from "@/app/components/coast-fire-age/output/graph"
 import Menseki from "@/app/components/common/Menseki"
 import TagFacesIcon from '@mui/icons-material/TagFaces';
+
 
 // 計算結果の型
 type achievedResultProps = {
@@ -23,7 +24,7 @@ type TumitateAmountLocal = {
   senyen: number | null;
 }
 
-const CoastFireAgeOfAchievement = () => {
+const CoastFireAgeClient = () => {
 
   // 入力値の初期値
   const inputs = {
@@ -99,8 +100,8 @@ const CoastFireAgeOfAchievement = () => {
             <div className="co-midashi2sentBlackContainer">
               <span></span>
               <div className="co-midashi2sentBlack">
-                <p>今の積立額だと何歳でコーストFIREできる??</p>
-                <p>コーストFIRE達成年齢シュミレーター</p>
+                <p>コーストFIREは何歳で達成できる？</p>
+                <h1>コーストFIREシュミレーター（達成年齢計算）</h1>
               </div>
             </div>
 
@@ -187,4 +188,4 @@ const CoastFireAgeOfAchievement = () => {
   )
 }
 
-export default CoastFireAgeOfAchievement;
+export default CoastFireAgeClient;
