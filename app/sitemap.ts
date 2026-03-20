@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/coastFireAgeOfAchievementPage",
+      url: "https://tumitate-simulator.vercel.app/coast-fire-age",
       lastModified: new Date(),
     },
     {
