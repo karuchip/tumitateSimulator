@@ -20,12 +20,12 @@ export default function CoastFireSimulation() {
 
   const methods = useForm<FireSimulationInput>({
     defaultValues: {
-      currentAgeYear: undefined,
-      currentAsset: undefined,
-      rate: 5,
-      requiredRetirementMoney: undefined,
-      finalAge: undefined,
-      coastAge: undefined,
+      currentAgeYear: 30,
+      currentAsset: 50,
+      rate: 3,
+      requiredRetirementMoney: 2000,
+      finalAge: 65,
+      coastAge: 40,
     },
   })
   const {handleSubmit} = methods;
@@ -124,9 +124,7 @@ export default function CoastFireSimulation() {
             </div>
 
             <p className="SimulatorCoastDescription">
-              本シュミレーターでは、コーストFIRE達成に向けた、
-              一定額(必要元本)を貯めるまでの「毎月の積立額」
-              を簡単にシミュレートできます。
+              何歳で「積立卒業」したい？そのために<span className="font-bold">毎月いくら必要か</span>を、かんたんに逆算できます。
               <a href="#menseki" className="toMenseki">（免責事項をご確認ください）</a>
             </p>
 
@@ -183,6 +181,7 @@ export default function CoastFireSimulation() {
       {lastInput?.finalAge ? (
         <div className="co-screenPosition callTorikuzushiComponent">
           <TorikuzushiResult
+            fireAge={lastInput.coastAge}
             finalAge={lastInput.finalAge}
             stopTotalAsset={stopTotalAssetParent}
             continueTotalAsset={continueTotalAssetParent}

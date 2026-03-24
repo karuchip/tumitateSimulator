@@ -10,6 +10,7 @@ import { useState, useEffect, useMemo } from "react";
 import CoastFireChart from "@/app/components/coast-fire-age/output/graph"
 import Menseki from "@/app/components/common/Menseki"
 import TagFacesIcon from '@mui/icons-material/TagFaces';
+import HowToUseAchieveSection from "../components/coast-fire-age/howtouse";
 
 
 // 計算結果の型
@@ -92,7 +93,7 @@ const CoastFireAgeClient = () => {
   }
 
   return(
-    <div className=" co-headerBunSageru">
+    <div className="co-headerBunSageru">
 
       <div className="SimulatorCoastContainer">
         <div className="co-screenPosition">
@@ -100,13 +101,14 @@ const CoastFireAgeClient = () => {
             <div className="co-midashi2sentBlackContainer">
               <span></span>
               <div className="co-midashi2sentBlack">
-                <p>コーストFIREは何歳で達成できる？</p>
+                <p>何歳で達成できる？</p>
                 <h1>コーストFIREシュミレーター（達成年齢計算）</h1>
               </div>
             </div>
 
             <p className="SimulatorCoastDescription">
-              本シュミレーターでは、今の積立額だと「何歳でコーストFIRE達成できる??」を簡単にシミュレートできます。
+              今の積立額だと<span className="font-bold">何歳でコーストFIRE達成できる？</span>を簡単にシミュレートできます。
+              「いつまで積立すればいいのか」を知りたい方におすすめです。
               <a href="#menseki" className="toMenseki">（免責事項をご確認ください）</a>
             </p>
 
@@ -136,20 +138,63 @@ const CoastFireAgeClient = () => {
           </div>
 
           <div className="SimulatorCoastResultSection">
+            <div className="co-komidashiGreen">
+              <span></span>
+              <h3>達成年齢予測</h3>
+            </div>
             {simulationResult?.coastFireAge !== null ? (
               <div className="risyokuResultAmount">
-                <p className="one oneGreen">
-                  <TagFacesIcon/>おめでとうございます<TagFacesIcon/><br/>{simulationResult?.coastFireAge}歳にコーストFIREを達成できる想定です！！
-                </p>
+                <div className="one oneGreen">
+                  <p><span className="!text-[32px] font-bold">{simulationResult?.coastFireAge}歳</span> にコーストFIRE達成見込み！</p>
+                  <p>おめでとうございます</p>
+                </div>
                 {simulationResult?.trajectory[simulationResult?.trajectory.length - 1].pv && (
-                  <p className="two twoGreen">
-                    {simulationResult?.coastFireAge}歳以降は積立をやめても、{values.retiredAge}歳時点で目標の{values.requiredRetirementMoney}万円に到達する見込みです。<br/>
-                    一方、FIRE達成後も積立を続けた場合、老後資金は約
-                    {(()=>{ const tumitateContinueLastPv = Math.floor(simulationResult?.trajectory[simulationResult?.trajectory.length - 1].pv);
-                      return tumitateContinueLastPv;
-                    })()}
-                    万円まで増える想定です。
-                  </p>
+                  <div className="my-10">
+                    <div className="co-komidashiGreen">
+                      <span></span>
+                      <h3>老後の資産額推定</h3>
+                    </div>
+                    <div className="max-w-2xl mx-auto border border-gray-400">
+                      {/* ヘッダー */}
+                      <div className="grid grid-cols-[20%_30%_50%]">
+                        <div className="col-span-2 border-r border-b border-gray-400"></div>
+                        <div className="border-b border-gray-400 bg-gray-200 text-center py-4 font-bold text-lg">
+                          {values.retiredAge}歳時点での資産額推定
+                        </div>
+                      </div>
+
+                      {/* 本体（ここを1つのgridにする） */}
+                      <div className="grid grid-cols-[20%_30%_50%]">
+
+                        {/* ← ここが縦結合される */}
+                        <div className="row-span-2 flex items-center justify-center bg-gray-200 border-r border-gray-400 text-center font-bold px-2">
+                          {simulationResult?.coastFireAge}歳以降<br />積み立てを
+                        </div>
+
+                        {/* 1行目 */}
+                        <div className="border-r border-b bg-gray-200 border-gray-400 text-center py-3 font-bold">
+                          やめた場合
+                        </div>
+                        <div className="border-b border-gray-400 bg-red-50 text-center py-3 font-bold text-xl">
+                          約 {values.requiredRetirementMoney} 万円
+                        </div>
+
+                        {/* 2行目 */}
+                        <div className="border-r bg-gray-200 border-gray-400 text-center py-3 font-bold">
+                          続けた場合
+                        </div>
+                        <div className="bg-red-50 text-center py-3 font-bold text-xl">
+                          {(() => {
+                            const tumitateContinueLastPv = Math.floor(
+                              simulationResult?.trajectory[simulationResult?.trajectory.length - 1].pv
+                            );
+                            return tumitateContinueLastPv;
+                          })()} 万円
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 )}
               </div>
             ):(
@@ -168,6 +213,10 @@ const CoastFireAgeClient = () => {
             <div className="ageGraphContainer">
               {simulationResult?.trajectory && (
                 <div>
+                  <div className="co-komidashiGreen">
+                    <span></span>
+                    <h3>資産推移見込み</h3>
+                  </div>
                   <CoastFireChart continueData={simulationResult.trajectory} coastStopData={simulationResult.achievedResult} coastFireAge={simulationResult?.coastFireAge}/>
                 </div>
               )}
@@ -175,6 +224,8 @@ const CoastFireAgeClient = () => {
           </div>
         </div>
       </div>
+
+      <HowToUseAchieveSection/>
 
       {/* 免責事項 */}
       <section className="mensekiContainer" id="menseki">

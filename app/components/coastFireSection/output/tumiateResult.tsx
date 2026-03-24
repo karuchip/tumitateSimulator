@@ -64,16 +64,13 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                   <div className="maitukinotumitategakuContainer">
                     <div className="co-komidashiGreen">
                       <span></span>
-                      <h3>達成に必要な毎月の積立額</h3>
+                      <h3>必要積立額</h3>
                     </div>
 
                     <div className="coastTumitateResultAmount">
-                      <p className="one">
-                        月 {formatCurrency(simulationResult.monthlyPMT)}円
-                      </p>
-                      <p className="two">
-                        月{formatCurrency(simulationResult.monthlyPMT)}円の積立で、{lastInput.coastAge}歳には必要元本の{formatCurrency(Math.floor(simulationResult.pvNeeded/10000))}万円に到達し、コーストFIRE達成予定です！
-                      </p>
+                      <p className="one">月 {formatCurrency(simulationResult.monthlyPMT)} 円</p>
+                      <p className="two">{lastInput.coastAge}歳でコーストFIREを達成できる見込みです </p>
+                      <p className="two">（運用利回り: {lastInput.rate}％） </p>
                     </div>
                   </div>
 
@@ -82,7 +79,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                   <div className="shisansuiiContainer">
                     <div className="co-komidashiGreen">
                       <span></span>
-                      <h3>資産推移</h3>
+                      <h3>資産推移見込み</h3>
                     </div>
                     <div className="w-full border border-[#59CAB2] rounded-none overflow-hidden mt-2">
                       {/* タブ部分 */}
@@ -95,7 +92,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                               : "bg-white text-gray-700"
                           }`}
                         >
-                          <span className="co-12px">元本到達後</span><br/>積立をやめた場合
+                          <span className="co-12px">{lastInput.coastAge}歳以降</span><br/>積立をやめた場合
                         </button>
                         <button
                           onClick={() => setTab("continue")}
@@ -105,7 +102,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                               : "bg-white text-gray-700"
                           }`}
                         >
-                          <span className="co-12px">元本到達後</span><br/>積立を続けた場合
+                          <span className="co-12px">{lastInput.coastAge}歳以降</span><br/>積立を続けた場合
                         </button>
                       </div>
 
@@ -115,7 +112,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                         {tab === "stop" ? (
 
                           // コーストFIRE達成後積立をやめた場合
-                          <div className='coastTumitateResultAmount'>
+                          <div className='coastTumitateResultAmountGraph'>
                             <div className="graph">
                               <ResultTumitateAmount
                                 key={tab}
@@ -135,7 +132,7 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
                         ) : (
 
                           // コーストFIRE達成後積立を続けた場合
-                          <div className="coastTumitateResultAmount">
+                          <div className="coastTumitateResultAmountGraph">
                             {/* グラフ */}
                             <div className="graph">
                               <ResultTumitateAmount
@@ -165,8 +162,10 @@ const TumitateResult = ({simulationResult, lastInput, resultStopTumitate, result
 
                 // コーストFIRE達成済みの場合
                 ) : (
-                  <div className="coastTumitateResultAmount">
-                    <p className="one">おめでとうございます！あなたはすでにコーストFIREを達成しています。</p>
+                  <div className="coastTumitateResultAmountGraph">
+                    <div className="coastTumitateResultAmount">
+                      <p className="one">おめでとうございます！あなたはすでにコーストFIRE達成しています。</p>
+                    </div>
                     <div className="three">
                       <ResultTumitateAmount
                         key={tab}

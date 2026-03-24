@@ -1,5 +1,7 @@
 "use client"
+import { FadeIn } from "../components/animation/fadeIn";
 import AboutCoastFire from "../components/coastFireSection/aboutCoastFire";
+import HowToUse from "../components/coastFireSection/howtouse";
 import CoastFireSimulation from "../components/coastFireSection/simulation";
 import Menseki from "../components/common/Menseki";
 
@@ -10,7 +12,11 @@ export default function CoastFirePageClient() {
 
       <section>
         <CoastFireSimulation/>
-        <AboutCoastFire/>
+        <FadeIn>
+          <AboutCoastFire/>
+        </FadeIn>
+        <HowToUse/>
+
       </section>
 
       <section className="mensekiContainer" id="menseki">

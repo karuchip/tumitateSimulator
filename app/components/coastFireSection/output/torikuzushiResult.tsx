@@ -4,12 +4,13 @@ import formatCurrency from '@/src/format/currency'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 type Props = {
+  fireAge: number,
   finalAge: number;
   stopTotalAsset: number;
   continueTotalAsset: number;
 }
 
-const TorikuzushiResult = ({finalAge, stopTotalAsset, continueTotalAsset}:Props) => {
+const TorikuzushiResult = ({fireAge, finalAge, stopTotalAsset, continueTotalAsset}:Props) => {
 
 
   // カスタムタブ用
@@ -60,7 +61,7 @@ const TorikuzushiResult = ({finalAge, stopTotalAsset, continueTotalAsset}:Props)
                         : "bg-white text-gray-700"
                     }`}
                   >
-                    <span className="co-12px">元本到達後</span><br/>積立をやめた場合
+                    <span className="co-12px">{fireAge}歳以降</span><br/>積立をやめた場合
                   </button>
                   <button
                     onClick={() => setTab("continue")}
@@ -70,7 +71,7 @@ const TorikuzushiResult = ({finalAge, stopTotalAsset, continueTotalAsset}:Props)
                         : "bg-white text-gray-700"
                     }`}
                   >
-                    <span className="co-12px">元本到達後</span><br/>積立を続けた場合
+                    <span className="co-12px">{fireAge}歳以降</span><br/>積立を続けた場合
                   </button>
                 </div>
 

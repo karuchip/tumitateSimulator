@@ -31,16 +31,6 @@ body {
   font-family: "Playfair", serif;
   font-size: 22px;
 }
-h1,
-h2,
-p,
-a,
-ul,
-li,
-span {
-  padding: 0;
-  margin: 0;
-}
 a {
   text-decoration: none;
 }
@@ -134,6 +124,7 @@ input {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-bottom: 20px !important;
 }
 .co-midashi2sentBlackContainer span {
   display: block;
@@ -160,15 +151,15 @@ input {
 .co-midashi2sentBlack p {
   font-size: 22px;
 }
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
   .co-midashi2sentBlack::before {
     height: 60px;
   }
-  .co-midashi2sentBlack p:nth-child(1) {
-    font-size: 14px;
+  .co-midashi2sentBlack p {
+    font-size: 14px !important;
   }
-  .co-midashi2sentBlack p:nth-child(2) {
-    font-size: 34px;
+  .co-midashi2sentBlack h1 {
+    font-size: 26px;
   }
 }
 /* 子見出し 緑 */
@@ -184,8 +175,8 @@ input {
   background-color: #A3C5BE;
 }
 .co-komidashiGreen h3 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* 囲み　緑 */
@@ -214,10 +205,10 @@ input {
   z-index: 1;
 }
 .co-simulationButton button{
-  /* border: 0.5px solid #606060; */
   border-radius: 5px;
-  padding: 3px 20px;
+  padding: 10px 20px;
   background-color: #ff7d55;
+  font-size: 20px;
   color: #fff;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
@@ -413,7 +404,7 @@ input {
 }
 @media screen and (min-width:1024px) {
   .SimulatorCoastDescription {
-    font-size: 18px;
+    font-size: 22px !important;
   }
 }
 .toMenseki {
@@ -425,6 +416,11 @@ input {
   color: #3343f4;
   border-bottom: 1px solid #3343f4;
 }
+@media screen and (min-width:1024px) {
+  .toMenseki {
+    font-size: 20px;
+  }
+}
 /* section2 入力 */
 .SimulatorCoastInputContainer {
   background-color: #f8fafc;
@@ -434,6 +430,7 @@ input {
 /* section3 結果*/
 .SimulatorCoastResultSection {
   padding: 20px;
+  height: fit-content;
 }
 .SimulatorCoastResultSection p{
   font-size: 16px;
@@ -475,30 +472,35 @@ input {
 /* 結果 */
 /* 元本到達までの積立額 */
 .coastTumitateResultAmount {
-  padding: 10px 10px 30px 10px;
-}
-@media screen and (min-width: 1024px) {
-  .coastTumitateResultAmount {
-    padding: 0 30px 10px 30px;
-  }
-}
-.coastTumitateResultAmount .one {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4d8478;
-  margin: 10px 0;
+
+  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
+  width: 100%;
+  color: #fff;
   text-align: center;
-  border: 2px solid #4d8478;
-  padding: 10px 0;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.coastTumitateResultAmount .one {
+  font-size: 32px;
 }
 .coastTumitateResultAmount .two {
   font-size: 16px;
-  color: #000;
 }
 
 @media screen and (min-width: 1024px) {
   .coastTumitateResultAmount .two {
     font-size: 16px;
+  }
+}
+
+.coastTumitateResultAmountGraph {
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .coastTumitateResultAmountGraph {
+    padding: 0 10px 10px 10px;
   }
 }
 .coastTumitateResultAmount .graph {
@@ -705,20 +707,17 @@ input {
 /* 離職期間の結果表 */
 /* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
 .risyokuResultAmount .one {
-  font-size: 20px;
-  font-weight: bold;
   margin: 10px 0;
   text-align: center;
   padding: 10px 0;
 }
 .oneGreen {
-  color: #4d8478;
-  border: 2px solid #4d8478;
-  background-color: #E6F2F0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #eba8bc, #a9556e, #a02b50, #eba9bd);
 }
 .oneRed {
-  color: #F48989;
-  border: 2px solid #F48989;
+  color: #a02b50;
+  border: 2px solid #a02b50;
   background-color: #FFF5F5;
 }
 .oneGreenRed {
@@ -729,13 +728,12 @@ input {
 .risyokuResultAmount .two {
   font-size: 16px;
   margin-bottom: 40px;
-  font-weight: bold;
 }
 .twoGreen {
-  color: #4d8478;
+  color: #393939;
 }
 .twoRed {
-  color: #F48989;
+  color: #a02b50;
 }
 /* app/components/risyokuSavingSimulatiorSection/output/tableResult.tsx */
 .marker {
@@ -780,16 +778,16 @@ input {
 .ageGraphContainer {
   width: 320px;
   margin: 0 auto;
-  height: auto;
+  height: fit-content;
 }
 @media screen and (min-width: 700px) {
   .ageGraphContainer {
     width: 600px;
-    height: auto;
+    height: fit-content;
   }
 }
 .ageResultContainer {
-  height: 640px;
+  height: fit-content;
 }
 @media screen and (max-width: 1023px){
   .ageResultContainer {

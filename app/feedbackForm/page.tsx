@@ -112,7 +112,7 @@ export default function FeedbackForm() {
       </button>
 
       <p style={{ fontSize: "12px", color: "#777" }}>
-        ※入力内容は保存・収集されません。送信内容は開発者のみに通知されます。
+        ※送信内容は開発者のみに通知されます。
       </p>
 
     </form>

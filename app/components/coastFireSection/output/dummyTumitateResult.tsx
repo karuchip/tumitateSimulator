@@ -24,7 +24,7 @@ const DummyTumitateResult = () => {
             <div className="maitukinotumitategakuContainer">
               <div className="co-komidashiGreen">
                 <span></span>
-                <h3>達成に必要な積立額</h3>
+                <h3>必要積立額</h3>
               </div>
 
 
@@ -33,8 +33,9 @@ const DummyTumitateResult = () => {
                   月 xxx,xxx円
                 </p>
                 <p className="two">
-                  月xx,xxx円の積立で、xx歳には必要元本のx,xxx万円に到達し、コーストFIRE達成予定です！
+                  xx歳でコーストFIREを達成できる見込みです
                 </p>
+                <p className="two">（運用利回り: xx％） </p>
               </div>
             </div>
 
@@ -42,7 +43,7 @@ const DummyTumitateResult = () => {
             <div className="shisansuiiContainer">
               <div className="co-komidashiGreen">
                 <span></span>
-                <h3>資産推移</h3>
+                <h3>資産推移見込み</h3>
               </div>
               <div className="w-full border border-[#59CAB2] rounded-none overflow-hidden mt-2">
                 {/* タブ部分 */}
@@ -75,7 +76,7 @@ const DummyTumitateResult = () => {
                   {tab === "stop" ? (
 
                     // コーストFIRE達成後積立をやめた場合
-                    <div className='coastTumitateResultAmount'>
+                    <div className='coastTumitateResultAmountGraph'>
                       <div className="graph">
                         <ResultTumitateAmount
                           key={tab}
@@ -95,7 +96,7 @@ const DummyTumitateResult = () => {
                   ) : (
 
                     // コーストFIRE達成後積立を続けた場合
-                    <div className='coastTumitateResultAmount'>
+                    <div className='coastTumitateResultAmountGraph'>
                       <div className="graph">
                         <ResultTumitateAmount
                           key={tab}
