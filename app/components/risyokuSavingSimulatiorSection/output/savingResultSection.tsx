@@ -12,9 +12,9 @@ const SavingResultSection = ({result, duration}: Props) => {
     <>
       <div className="maitukinotumitategakuContainer">
 
-        <div className="co-komidashiGreen">
+        <div className="co-komidashiOrange">
           <span></span>
-          <h3>最終貯金額</h3>
+          <h3>最終貯金残高</h3>
         </div>
 
         {/* stateごとに区別 */}
@@ -22,7 +22,9 @@ const SavingResultSection = ({result, duration}: Props) => {
         {result.savingState === "yes" && (
           <div className="risyokuResultAmount">
             <p className="one oneGreenRisyoku">
-              {result.finalSavingAmount}万円
+              <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
+              {result.finalSavingAmount}
+              <span style={{fontSize:"20px"}}> 万円です</span>
             </p>
             <p className="two twoGreen">
               離職期間に貯金が底を尽きることはなく、{duration}ヶ月後には{result.finalSavingAmount}万円残る結果です。安心して離職期間を過ごせそうです。
@@ -34,7 +36,9 @@ const SavingResultSection = ({result, duration}: Props) => {
         {result.savingState === "break" && (
           <div className="risyokuResultAmount">
             <p className="one oneGreenRed">
-              {result.finalSavingAmount}万円
+              <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
+              {result.finalSavingAmount}
+              <span style={{fontSize:"20px"}}> 万円です</span>
             </p>
             <p className="two twoGreen">
               途中で貯金がマイナスに転じる時期はありますが、最終的には{duration}ヶ月後に、{result.finalSavingAmount}万円の残高となる試算結果です。支出調整によって改善が見込めます。
@@ -51,7 +55,9 @@ const SavingResultSection = ({result, duration}: Props) => {
             return (
               <div className="risyokuResultAmount">
                 <p className="one oneRed">
-                  {result.finalSavingAmount}万円
+                  <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
+                  {result.finalSavingAmount}
+                  <span style={{fontSize:"20px"}}> 万円です</span>
                 </p>
                 <p className="two twoRed">
                   {runningOutMonth}ヶ月目で貯金が底をつき、最終的には{duration}ヶ月後に、{shortfall}万円の不足が生じる見込みです。早めに支出を調整して備えておきましょう。

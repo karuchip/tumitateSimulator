@@ -14,11 +14,13 @@ export default function Home() {
 
         <div className="menuItemContainer">
 
+          <h2>コーストFIREシュミレーター</h2>
+
           <div className="menuItemsContent">
             <div className="menuItems">
               <Link href="/coastFirePage">
-                <h2>コーストFIRE積立金額シュミレーター</h2>
-                <p>コーストFIRE達成までの積立金額をシュミレートできます。</p>
+                <h2>積立金額シュミレーター</h2>
+                <p>何歳で「積立卒業」したい？そのために<span className="font-bold">毎月いくら必要か</span>を、かんたんに逆算できます。</p>
               </Link>
             </div>
           </div>
@@ -26,8 +28,8 @@ export default function Home() {
           <div className="menuItemsContent">
             <div className="menuItems">
               <Link href="/coast-fire-age">
-                <h2>コーストFIRE達成年齢シュミレーター</h2>
-                <p>今の積立額でコーストFIREを達成可能か？をシュミレートできます。</p>
+                <h2>達成年齢シュミレーター</h2>
+                <p>今の積立額だと<span className="font-bold">何歳でコーストFIRE達成できる？</span>を簡単にシミュレートできます。</p>
               </Link>
             </div>
           </div>

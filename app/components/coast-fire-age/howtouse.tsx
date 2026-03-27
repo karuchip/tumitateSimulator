@@ -18,7 +18,7 @@ export default function HowToUseAchieveSection() {
         <FadeIn>
           {/* Step1 */}
           <div className="!mb-8">
-            <h3 className="text-lg md:text-xl font-semibold text-green-700 !mb-2">
+            <h3 className="text-lg md:text-xl font-semibold text-[#c36782] !mb-2">
               Step1. 現在の状況を入力
             </h3>
             <p className="text-gray-600 !mb-3">
@@ -36,7 +36,7 @@ export default function HowToUseAchieveSection() {
         <FadeIn>
           {/* Step2 */}
           <div className="!mb-10">
-            <h3 className="text-lg md:text-xl font-semibold text-green-700 !mb-2">
+            <h3 className="text-lg md:text-xl font-semibold text-[#c36782] !mb-2">
               Step2. 目標を設定
             </h3>
             <p className="text-gray-600 !mb-3">
@@ -51,11 +51,11 @@ export default function HowToUseAchieveSection() {
 
         <FadeIn>
           {/* 自動計算 */}
-          <div className="mb-20 p-5 bg-green-50 rounded-xl">
-            <h3 className="text-lg md:text-xl font-semibold text-green-800 mb-2">
+          <div className="mb-20 p-5 bg-[#FFF0F5] rounded-xl">
+            <h3 className="text-lg md:text-xl font-semibold text-[#a44160] mb-2">
               入力すると自動で計算されます
             </h3>
-            <p className="text-green-900">
+            <p className="text-[#a44160]">
               このシミュレーターでは、入力内容を変更すると自動的に再計算され、
               コーストFIREを達成できる年齢の想定結果がリアルタイムで表示されます。
             </p>
@@ -74,7 +74,7 @@ export default function HowToUseAchieveSection() {
           <FadeIn>
             {/* 達成年齢 */}
             <div className="p-5 border rounded-xl shadow-sm">
-              <h4 className="font-semibold text-green-700 mb-2">
+              <h4 className="font-semibold text-[#c36782] mb-2">
                 ■ コーストFIRE達成年齢予測
               </h4>
               <p className="text-gray-700">
@@ -86,7 +86,7 @@ export default function HowToUseAchieveSection() {
           <FadeIn>
             {/* 表 */}
             <div className="p-5 border rounded-xl shadow-sm">
-              <h4 className="font-semibold text-green-700 mb-2">
+              <h4 className="font-semibold text-[#c36782] mb-2">
                 ■ 老後の資産額推定表
               </h4>
               <p className="text-gray-700">
@@ -98,7 +98,7 @@ export default function HowToUseAchieveSection() {
           <FadeIn>
             {/* グラフ */}
             <div className="p-5 border rounded-xl shadow-sm">
-              <h4 className="font-semibold text-green-700 mb-2">
+              <h4 className="font-semibold text-[#c36782] mb-2">
                 ■ 資産推移見込みグラフ
               </h4>
               <p className="text-gray-700">
@@ -111,11 +111,11 @@ export default function HowToUseAchieveSection() {
 
         <FadeIn>
           {/* ポイント */}
-          <div className="mt-10 p-6 bg-green-50 rounded-2xl">
-            <h4 className="font-semibold text-green-800 mb-3">
+          <div className="mt-10 p-6 bg-[#FFF0F5] rounded-2xl">
+            <h4 className="font-semibold text-[#a44160] mb-3">
               ✨ 使い方のポイント
             </h4>
-            <ul className="list-disc pl-5 text-green-900 space-y-1">
+            <ul className="list-disc pl-5 text-[#a44160] space-y-1">
               <li>利回りは控えめ（3〜5%）に設定すると現実的です</li>
               <li>積立額を変えて、達成年齢の変化を試してみましょう</li>
             </ul>

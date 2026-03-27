@@ -78,8 +78,8 @@ const CoastFireChart = ({
     {
       label: "積立を続けた場合の資産推移",
       data: continueData ? continueData.map(d => Math.floor(d.pv)) : [],
-      borderColor: "#59CAB2",
-      backgroundColor: "#8bf9e184",
+      borderColor: "#5997ca",
+      backgroundColor: "#5997ca56",
       tension: 0.3,
       fill: "start",
       pointRadius: 0,

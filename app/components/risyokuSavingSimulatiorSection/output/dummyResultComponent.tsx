@@ -19,8 +19,8 @@ const dummyResultComponent = () => {
 
   return (
     <>
-      <div className="SimulatorCoastResult co-kakomiGreen">
-        <div className="co-midashiGreen">
+      <div className="SimulatorCoastResult co-kakomiOrange">
+        <div className="co-midashiOrange">
           <span></span>
           <h1>シュミレーション結果</h1>
         </div>
@@ -31,12 +31,12 @@ const dummyResultComponent = () => {
           <SavingResultSection result={result} duration={duration}/>
 
           <div className="shisansuiiContainer">
-            <div className="co-komidashiGreen">
+            <div className="co-komidashiOrange">
               <span></span>
               <h3>貯金額の推移</h3>
             </div>
 
-            <div className="w-full border border-[#A3C5BE] rounded-none overflow-hidden mt-2">
+            <div className="w-full border border-[#ebc091] rounded-none overflow-hidden mt-2">
 
               {/* グラフ */}
               <div>

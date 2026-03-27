@@ -98,7 +98,7 @@ const CoastFireAgeClient = () => {
       <div className="SimulatorCoastContainer">
         <div className="co-screenPosition">
           <div>
-            <div className="co-midashi2sentBlackContainer">
+            <div className="co-midashi2sentRedContainer">
               <span></span>
               <div className="co-midashi2sentBlack">
                 <p>何歳で達成できる？</p>
@@ -132,13 +132,13 @@ const CoastFireAgeClient = () => {
 
         {/* 結果 */}
         <div className="SimulatorCoastResult co-kakomiGreen ageResultContainer">
-          <div className="co-midashiGreen">
+          <div className="co-midashiPink">
             <span></span>
             <h1>シュミレーション結果</h1>
           </div>
 
           <div className="SimulatorCoastResultSection">
-            <div className="co-komidashiGreen">
+            <div className="co-komidashiPink">
               <span></span>
               <h3>達成年齢予測</h3>
             </div>
@@ -150,7 +150,7 @@ const CoastFireAgeClient = () => {
                 </div>
                 {simulationResult?.trajectory[simulationResult?.trajectory.length - 1].pv && (
                   <div className="my-10">
-                    <div className="co-komidashiGreen">
+                    <div className="co-komidashiPink">
                       <span></span>
                       <h3>老後の資産額推定</h3>
                     </div>
@@ -158,7 +158,7 @@ const CoastFireAgeClient = () => {
                       {/* ヘッダー */}
                       <div className="grid grid-cols-[20%_30%_50%]">
                         <div className="col-span-2 border-r border-b border-gray-400"></div>
-                        <div className="border-b border-gray-400 bg-gray-200 text-center py-4 font-bold text-lg">
+                        <div className="text-[13px] md:text-[18px] border-b border-gray-400 bg-gray-200 text-center py-4 font-bold text-lg">
                           {values.retiredAge}歳時点での資産額推定
                         </div>
                       </div>
@@ -167,23 +167,23 @@ const CoastFireAgeClient = () => {
                       <div className="grid grid-cols-[20%_30%_50%]">
 
                         {/* ← ここが縦結合される */}
-                        <div className="row-span-2 flex items-center justify-center bg-gray-200 border-r border-gray-400 text-center font-bold px-2">
+                        <div className="text-[13px] md:text-[16px] row-span-2 flex items-center justify-center bg-gray-200 border-r border-gray-400 text-center font-bold px-2">
                           {simulationResult?.coastFireAge}歳以降<br />積み立てを
                         </div>
 
                         {/* 1行目 */}
-                        <div className="border-r border-b bg-gray-200 border-gray-400 text-center py-3 font-bold">
+                        <div className="text-[13px] md:text-[18px] border-r border-b bg-gray-200 border-gray-400 text-center py-3 font-bold">
                           やめた場合
                         </div>
-                        <div className="border-b border-gray-400 bg-red-50 text-center py-3 font-bold text-xl">
+                        <div className="text-[16px] md:text-[24px] border-b border-gray-400 bg-red-50 text-center py-3 font-bold text-xl">
                           約 {values.requiredRetirementMoney} 万円
                         </div>
 
                         {/* 2行目 */}
-                        <div className="border-r bg-gray-200 border-gray-400 text-center py-3 font-bold">
+                        <div className="text-[13px] md:text-[18px] border-r bg-gray-200 border-gray-400 text-center py-3 font-bold">
                           続けた場合
                         </div>
-                        <div className="bg-red-50 text-center py-3 font-bold text-xl">
+                        <div className="text-[16px] md:text-[24px] bg-red-50 text-center py-3 font-bold text-xl">
                           {(() => {
                             const tumitateContinueLastPv = Math.floor(
                               simulationResult?.trajectory[simulationResult?.trajectory.length - 1].pv
@@ -213,7 +213,7 @@ const CoastFireAgeClient = () => {
             <div className="ageGraphContainer">
               {simulationResult?.trajectory && (
                 <div>
-                  <div className="co-komidashiGreen">
+                  <div className="co-komidashiPink">
                     <span></span>
                     <h3>資産推移見込み</h3>
                   </div>
