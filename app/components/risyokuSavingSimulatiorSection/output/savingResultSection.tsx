@@ -21,7 +21,7 @@ const SavingResultSection = ({result, duration}: Props) => {
         {/* ずっとプラス */}
         {result.savingState === "yes" && (
           <div className="risyokuResultAmount">
-            <p className="one oneGreen">
+            <p className="one oneGreenRisyoku">
               {result.finalSavingAmount}万円
             </p>
             <p className="two twoGreen">

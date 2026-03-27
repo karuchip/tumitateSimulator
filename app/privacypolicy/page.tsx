@@ -83,6 +83,7 @@ export default function PrivacyPolicy() {
             当サイトの情報を利用したことによって生じた損害等について、
             一切の責任を負いかねますのでご了承ください。
           </p>
+          <p>免責事項は下記リンクからご確認ください。</p>
           <a href="/mensekiPage" className="toMenseki">免責事項</a>
         </div>
 
@@ -104,6 +105,12 @@ export default function PrivacyPolicy() {
           <p>
             本ポリシーに関するお問い合わせは、当サイト内のお問い合わせフォームよりお願いいたします。
           </p>
+          <a href="/feedbackForm" className="toMenseki">お問い合わせ</a>
+        </div>
+
+        {/* セクション8 */}
+        <div className="mb-12 text-right">
+          2026年3月
         </div>
 
       </div>

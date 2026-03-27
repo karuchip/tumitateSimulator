@@ -715,15 +715,26 @@ input {
   color: #ffffff;
   background: linear-gradient(135deg, #eba8bc, #a9556e, #a02b50, #eba9bd);
 }
+.oneGreenRisyoku {
+  color: #4d8478;
+  border: 2px solid #4d8478;
+  background-color: #D9E7E2;
+  font-size: 32px !important;
+  font-weight: bold;
+}
 .oneRed {
   color: #a02b50;
   border: 2px solid #a02b50;
   background-color: #FFF5F5;
+  font-size: 32px !important;
+  font-weight: bold;
 }
 .oneGreenRed {
   color: #4d8478;
   border: 2px solid #4d8478;
   background-color: #FFF5F5;
+  font-size: 32px !important;
+  font-weight: bold;
 }
 .risyokuResultAmount .two {
   font-size: 16px;

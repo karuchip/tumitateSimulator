@@ -75,7 +75,7 @@ export default function HowToUse() {
                 ■ 必要積立額
               </h4>
               <p className="text-gray-700">
-                毎月いくら積み立てれば目標を達成できるかが表示されます。
+                毎月いくら積み立てれば目標を達成できるかの想定値が表示されます。
               </p>
               <p className="text-sm text-gray-500 mt-1">
                 👉 無理のない金額かチェックしましょう

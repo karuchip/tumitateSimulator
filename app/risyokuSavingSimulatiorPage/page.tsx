@@ -61,7 +61,7 @@ const RisyokuSavingSimulator = () => {
                 <span></span>
                 <div className="co-midashi2sentBlack">
                   <p>もし今、1年休んだら貯金はいくら残る？</p>
-                  <p>離職期間の貯金推移シュミレーター</p>
+                  <h1>離職期間の貯金推移シュミレーター</h1>
                 </div>
               </div>
 

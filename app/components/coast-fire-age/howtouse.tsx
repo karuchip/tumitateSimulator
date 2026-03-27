@@ -99,7 +99,7 @@ export default function HowToUseAchieveSection() {
             {/* グラフ */}
             <div className="p-5 border rounded-xl shadow-sm">
               <h4 className="font-semibold text-green-700 mb-2">
-                ■ 資産推移グラフ
+                ■ 資産推移見込みグラフ
               </h4>
               <p className="text-gray-700">
                 資産がどのように増えていくかの想定を視覚的に確認できます。

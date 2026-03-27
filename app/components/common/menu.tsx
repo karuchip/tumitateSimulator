@@ -17,6 +17,7 @@ import TollIcon from '@mui/icons-material/Toll';
 import HomeIcon from '@mui/icons-material/Home';
 import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import Link from 'next/link';
 
 export default function TemporaryDrawer() {
@@ -98,6 +99,18 @@ export default function TemporaryDrawer() {
                 <WarningIcon />
               </ListItemIcon>
               免責事項
+              <ListItemText/>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <Link href={"/privacypolicy"}>
+            <ListItemButton>
+              <ListItemIcon>
+                <PrivacyTipIcon />
+              </ListItemIcon>
+              プライバシーポリシー
               <ListItemText/>
             </ListItemButton>
           </Link>
