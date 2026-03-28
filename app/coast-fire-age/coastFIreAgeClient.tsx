@@ -144,7 +144,7 @@ const CoastFireAgeClient = () => {
             </div>
             {simulationResult?.coastFireAge !== null ? (
               <div className="risyokuResultAmount">
-                <div className="one oneGreen">
+                <div className="one oneRed">
                   <p><span className="!text-[32px] font-bold">{simulationResult?.coastFireAge}歳</span> にコーストFIRE達成見込み！</p>
                   <p>おめでとうございます</p>
                 </div>
@@ -176,7 +176,16 @@ const CoastFireAgeClient = () => {
                           やめた場合
                         </div>
                         <div className="text-[16px] md:text-[24px] border-b border-gray-400 bg-red-50 text-center py-3 font-bold text-xl">
-                          約 {values.requiredRetirementMoney} 万円
+
+                          {(() => {
+                            const tumitateStopLastPv = Math.floor(
+                              (simulationResult?.achievedResult && simulationResult.achievedResult.length > 0)
+                                ? simulationResult.achievedResult[simulationResult.achievedResult.length - 1].pv
+                                : 0
+                            );
+                            return tumitateStopLastPv;
+                          })()} 万円
+
                         </div>
 
                         {/* 2行目 */}
@@ -198,11 +207,11 @@ const CoastFireAgeClient = () => {
                 )}
               </div>
             ):(
-              <div className="risyokuResultAmount">
-                <p className="one oneRed">
+              <div className="ageResultAmount">
+                <p className="one oneBlue">
                   今の積立額だとコーストFIRE達成できません、、、<br/>入力値を変えてみましょう
                 </p>
-                <p className="two twoRed">
+                <p className="two twoBlue">
                   {simulationResult?.tumitateAmount && (
                     <>{values.retiredAge}歳時点で資産を{values.requiredRetirementMoney}万円を目指す場合、毎月およそ{simulationResult.tumitateAmount.manyen}万{simulationResult.tumitateAmount.senyen}円の積立が目安となります。</>
                   )}
