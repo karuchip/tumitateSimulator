@@ -506,7 +506,7 @@ input {
   justify-content: space-between;
   padding: 10px;
   align-items: center;
-  background-color: #A3C5BE;
+  background-color: #dddddd;
   position: fixed;
   top: 0;
   left: 0;
@@ -517,7 +517,7 @@ input {
   width: fit-content;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: #050505;
 }
 
 
@@ -612,7 +612,7 @@ input {
 }
 /* section4 免責*/
 .mensekiContainer {
-  background-color: #E6F2F0;
+  background-color: #cacaca;
   padding: 60px 0 60px 0;
 }
 
@@ -787,7 +787,7 @@ input {
 .mensekiPage {
   padding-top: 100px;
   height: 100vh;
-  background-color: #E6F2F0;
+  background-color: #cacaca;
 }
 
 /* メニュー */
