@@ -882,6 +882,30 @@ input {
   margin-bottom: 5px;
 }
 
+/* 達成年齢シュミレーター　結果 */
+.ageResultAmount .one {
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px 0;
+}
+.oneRed {
+  color: #ffffff;
+  background: linear-gradient(135deg, #eba8bc, #a9556e, #a02b50, #eba9bd);
+}
+.oneBlue {
+  color: #ffffff;
+  background: linear-gradient(135deg, #619DCC, #437295, #1e4b6e, #619DCC);
+  border: none;
+  font-size: 24px;
+}
+.twoBlue {
+  margin:0 30px;
+  color: #1e4b6e;
+  font-size: 18px !important;
+  margin-bottom: 40px;
+}
+
+
 /* 離職期間の結果表 */
 /* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
 .risyokuResultAmount .one {
@@ -889,25 +913,9 @@ input {
   text-align: center;
   padding: 10px 0;
 }
-.oneGreen {
-  color: #ffffff;
-  background: linear-gradient(135deg, #eba8bc, #a9556e, #a02b50, #eba9bd);
-}
-.oneGreenRisyoku {
-  color: #ffffff;
-  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
-  font-size: 32px !important;
-  font-weight: bold;
-}
-.oneRed {
+.oneOrange {
   color: #ffffff;
   background: linear-gradient(135deg, #edbe8d, #d7760e, #b46007, #f1d7bc);
-  font-size: 32px !important;
-  font-weight: bold;
-}
-.oneGreenRed {
-  color: #ffffff;
-  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
   font-size: 32px !important;
   font-weight: bold;
 }

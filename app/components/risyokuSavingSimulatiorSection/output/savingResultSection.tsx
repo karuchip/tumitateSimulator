@@ -21,7 +21,7 @@ const SavingResultSection = ({result, duration}: Props) => {
         {/* ずっとプラス */}
         {result.savingState === "yes" && (
           <div className="risyokuResultAmount">
-            <p className="one oneGreenRisyoku">
+            <p className="one oneOrange">
               <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
               {result.finalSavingAmount}
               <span style={{fontSize:"20px"}}> 万円です</span>
@@ -35,7 +35,7 @@ const SavingResultSection = ({result, duration}: Props) => {
         {/* 途中で一度貯金が尽きるが、最終月はプラス */}
         {result.savingState === "break" && (
           <div className="risyokuResultAmount">
-            <p className="one oneGreenRed">
+            <p className="one oneOrange">
               <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
               {result.finalSavingAmount}
               <span style={{fontSize:"20px"}}> 万円です</span>
@@ -54,7 +54,7 @@ const SavingResultSection = ({result, duration}: Props) => {
             const shortfall = Math.abs(result.finalSavingAmount);
             return (
               <div className="risyokuResultAmount">
-                <p className="one oneRed">
+                <p className="one oneOrange">
                   <span style={{fontSize:"20px"}}>{duration}ヶ月後の貯金残高は </span>
                   {result.finalSavingAmount}
                   <span style={{fontSize:"20px"}}> 万円です</span>
