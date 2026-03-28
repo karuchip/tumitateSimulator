@@ -31,16 +31,6 @@ body {
   font-family: "Playfair", serif;
   font-size: 22px;
 }
-h1,
-h2,
-p,
-a,
-ul,
-li,
-span {
-  padding: 0;
-  margin: 0;
-}
 a {
   text-decoration: none;
 }
@@ -128,12 +118,48 @@ input {
   color: #fff;
   width: fit-content;
 }
+
+/* 見出し ピンク*/
+.co-midashiPink {
+  padding: 0 0 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: #DA93A7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.co-midashiPink h1{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  width: fit-content;
+}
+/* 見出し オレンジ*/
+.co-midashiOrange {
+  padding: 0 0 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: #EB9D48;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.co-midashiOrange h1{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  width: fit-content;
+}
 /* 見出し 2行　黒 */
 .co-midashi2sentBlackContainer {
   padding: 10px 0;
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-bottom: 20px !important;
 }
 .co-midashi2sentBlackContainer span {
   display: block;
@@ -141,11 +167,47 @@ input {
   height: 90px;
   background-color: #A3C5BE;
 }
+/* 見出し 2行　赤 */
+.co-midashi2sentRedContainer {
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px !important;
+}
+.co-midashi2sentRedContainer span {
+  display: block;
+  width: 10px;
+  height: 90px;
+  background-color: #DA93A7;
+}
+/* 見出し 2行　オレンジ */
+.co-midashi2sentOrangeContainer {
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px !important;
+}
+.co-midashi2sentOrangeContainer span {
+  display: block;
+  width: 10px;
+  height: 180px;
+  background-color: #ebc091;
+}
 @media screen and (min-width: 1024px){
   .co-midashi2sentBlackContainer span {
     width: 10px;
   }
+  .co-midashi2sentRedContainer span {
+    width: 10px;
+  }
+  .co-midashi2sentOrangeContainer span {
+    width: 10px;
+    height: 80px;
+  }
 }
+/* 緑 */
 .co-midashi2sentBlack::before {
   display: block;
   width: 5px;
@@ -157,18 +219,32 @@ input {
   font-weight: bold;
   color: #000;
 }
+.co-midashi2sentOrange p {
+  font-size: 22px;
+}
+/* オレンジ */
+.co-midashi2sentOrange::before {
+  display: block;
+  width: 5px;
+  height: 30px;
+}
+.co-midashi2sentOrange h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
 .co-midashi2sentBlack p {
   font-size: 22px;
 }
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
   .co-midashi2sentBlack::before {
     height: 60px;
   }
-  .co-midashi2sentBlack p:nth-child(1) {
-    font-size: 14px;
+  .co-midashi2sentBlack p {
+    font-size: 14px !important;
   }
-  .co-midashi2sentBlack p:nth-child(2) {
-    font-size: 34px;
+  .co-midashi2sentBlack h1 {
+    font-size: 26px;
   }
 }
 /* 子見出し 緑 */
@@ -184,13 +260,63 @@ input {
   background-color: #A3C5BE;
 }
 .co-komidashiGreen h3 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* 子見出し ピンク */
+.co-komidashiPink {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.co-komidashiPink span{
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #DA93A7;
+}
+.co-komidashiPink h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* 子見出し オレンジ */
+.co-komidashiOrange {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.co-komidashiOrange span{
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #EB9D48;
+}
+.co-komidashiOrange h3 {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* 囲み　緑 */
 .co-kakomiGreen {
   border: 1px solid #A3C5BE;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+/* 囲み　ピンク */
+.co-kakomiPink {
+  border: 1px solid #fad2de;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+/* 囲み　オレンジ */
+.co-kakomiOrange {
+  border: 1px solid #ebc091;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
   background-color: #fff;
@@ -214,10 +340,10 @@ input {
   z-index: 1;
 }
 .co-simulationButton button{
-  /* border: 0.5px solid #606060; */
   border-radius: 5px;
-  padding: 3px 20px;
+  padding: 10px 20px;
   background-color: #ff7d55;
+  font-size: 20px;
   color: #fff;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
@@ -232,6 +358,32 @@ input {
   box-shadow: none;
   background-color: #f3987d;
 }
+/* 緑のボタン */
+.co-simulationButtonBlue {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.co-simulationButtonBlue button{
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #60A092;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+  margin: 20px auto 0 auto;
+  position:absolute;
+  top: 0;
+  width: fit-content;
+}
+.co-simulationButtonBlue button:hover {
+  top: 5px;
+  box-shadow: none;
+  background-color: #4a7a70;
+}
+
 /* サブボタン */
 .co-simulationButton2 {
   display: flex;
@@ -239,7 +391,7 @@ input {
 .co-simulationButton2 button{
   border-radius: 5px;
   padding: 1px 10px;
-  background-color: #89C0F4;
+  background-color: #60A092;
   font-size: 12px;
   color: #fff;
   font-weight: bold;
@@ -248,7 +400,7 @@ input {
   margin: 10px 0 15px 0;
 }
 .co-simulationButton2 button:hover {
-  background-color: #468cce;
+  background-color: #4a7a70;
 }
 .co-simulationButton3 {
   display: flex;
@@ -258,7 +410,7 @@ input {
 .co-simulationButton3 button{
   border-radius: 5px;
   padding: 1px 10px;
-  background-color: #F48989;
+  background-color: #89C0F4;
   font-size: 12px;
   color: #fff;
   font-weight: bold;
@@ -269,7 +421,7 @@ input {
   margin: 10px 0 15px 0;
 }
 .co-simulationButton3 button:hover {
-  background-color: #dd5151;
+  background-color: #468cce;
 }
 @media screen and (min-width:1024px) {
   .co-simulationButton button{
@@ -413,7 +565,7 @@ input {
 }
 @media screen and (min-width:1024px) {
   .SimulatorCoastDescription {
-    font-size: 18px;
+    font-size: 22px !important;
   }
 }
 .toMenseki {
@@ -425,8 +577,18 @@ input {
   color: #3343f4;
   border-bottom: 1px solid #3343f4;
 }
+@media screen and (min-width:1024px) {
+  .toMenseki {
+    font-size: 20px;
+  }
+}
 /* section2 入力 */
 .SimulatorCoastInputContainer {
+  background-color: #f8fafc;
+  border: 1px solid #E5E7EB;
+  padding: 20px 30px;
+}
+.SimulatorCoastInputContainerOrange {
   background-color: #f8fafc;
   border: 1px solid #E5E7EB;
   padding: 20px 30px;
@@ -434,6 +596,7 @@ input {
 /* section3 結果*/
 .SimulatorCoastResultSection {
   padding: 20px;
+  height: fit-content;
 }
 .SimulatorCoastResultSection p{
   font-size: 16px;
@@ -461,6 +624,18 @@ input {
   border-bottom: 1px solid #60A092;
   width: fit-content;
 }
+.InputContainerPink h3 {
+  font-weight: bold;
+  color:#C36782;
+  border-bottom: 1px solid #C36782;
+  width: fit-content;
+}
+.InputContainerOrange h3 {
+  font-weight: bold;
+  color:#DF821E;
+  border-bottom: 1px solid #DF821E;
+  width: fit-content;
+}
 .InputYourSituation {
   margin: 10px 0;
 }
@@ -475,30 +650,35 @@ input {
 /* 結果 */
 /* 元本到達までの積立額 */
 .coastTumitateResultAmount {
-  padding: 10px 10px 30px 10px;
-}
-@media screen and (min-width: 1024px) {
-  .coastTumitateResultAmount {
-    padding: 0 30px 10px 30px;
-  }
-}
-.coastTumitateResultAmount .one {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4d8478;
-  margin: 10px 0;
+
+  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
+  width: 100%;
+  color: #fff;
   text-align: center;
-  border: 2px solid #4d8478;
-  padding: 10px 0;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.coastTumitateResultAmount .one {
+  font-size: 32px;
 }
 .coastTumitateResultAmount .two {
   font-size: 16px;
-  color: #000;
 }
 
 @media screen and (min-width: 1024px) {
   .coastTumitateResultAmount .two {
     font-size: 16px;
+  }
+}
+
+.coastTumitateResultAmountGraph {
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .coastTumitateResultAmountGraph {
+    padding: 0 10px 10px 10px;
   }
 }
 .coastTumitateResultAmount .graph {
@@ -705,37 +885,43 @@ input {
 /* 離職期間の結果表 */
 /* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
 .risyokuResultAmount .one {
-  font-size: 20px;
-  font-weight: bold;
   margin: 10px 0;
   text-align: center;
   padding: 10px 0;
 }
 .oneGreen {
-  color: #4d8478;
-  border: 2px solid #4d8478;
-  background-color: #E6F2F0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #eba8bc, #a9556e, #a02b50, #eba9bd);
 }
-.oneRed {
-  color: #F48989;
-  border: 2px solid #F48989;
-  background-color: #FFF5F5;
-}
-.oneGreenRed {
-  color: #4d8478;
-  border: 2px solid #4d8478;
-  background-color: #FFF5F5;
-}
-.risyokuResultAmount .two {
-  font-size: 16px;
-  margin-bottom: 40px;
+.oneGreenRisyoku {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
+  font-size: 32px !important;
   font-weight: bold;
 }
+.oneRed {
+  color: #ffffff;
+  background: linear-gradient(135deg, #edbe8d, #d7760e, #b46007, #f1d7bc);
+  font-size: 32px !important;
+  font-weight: bold;
+}
+.oneGreenRed {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8fd6c8, #238479, #09312a, #7fc2b5);
+  font-size: 32px !important;
+  font-weight: bold;
+}
+.risyokuResultAmount .two {
+  font-size: 18px !important;;
+  margin-bottom: 40px;
+}
 .twoGreen {
-  color: #4d8478;
+  color: #393939;
+  font-size: 18px !important;
 }
 .twoRed {
-  color: #F48989;
+  color: #d7760e;
+  font-size: 18px !important;
 }
 /* app/components/risyokuSavingSimulatiorSection/output/tableResult.tsx */
 .marker {
@@ -751,7 +937,7 @@ input {
   background-color: #E07A7A;
 }
 .bg {
-  background-color: #F2F8F6;
+  background-color: #fff9f3;
 }
 .saving-table {
   width: 100%;
@@ -780,16 +966,16 @@ input {
 .ageGraphContainer {
   width: 320px;
   margin: 0 auto;
-  height: auto;
+  height: fit-content;
 }
 @media screen and (min-width: 700px) {
   .ageGraphContainer {
     width: 600px;
-    height: auto;
+    height: fit-content;
   }
 }
 .ageResultContainer {
-  height: 640px;
+  height: fit-content;
 }
 @media screen and (max-width: 1023px){
   .ageResultContainer {

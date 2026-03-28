@@ -146,8 +146,8 @@ export default function InputItems() {
 
             <label>
               <div className="inputItems">
-                <p>3. 積立をやめる予定の年齢</p>
-                <p style={{fontSize:"13px", marginLeft:"8px"}}>（コーストFIREを達成したい年齢）</p>
+                <p>3. コーストFIREを達成したい年齢</p>
+                <p style={{fontSize:"13px", marginLeft:"8px"}}>（積立をやめる予定の年齢）</p>
               </div>
               <input
                 type="number"

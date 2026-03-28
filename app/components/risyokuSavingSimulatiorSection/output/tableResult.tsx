@@ -6,9 +6,9 @@ type Props = {
 
 const TableResult = ({result}:Props) => {
   return(
-    <table className="w-60 overflow-hidden mt-4 mx-auto mb-10 border-collapse rounded-t-md border-2 border-[#60A092]">
+    <table className="w-60 overflow-hidden mt-4 mx-auto mb-10 border-collapse rounded-t-md border-2 border-[#ebc091]">
       <thead>
-        <tr className="bg-[#A3C5BE] text-[#ffffff]">
+        <tr className="bg-[#ebc091] text-[#ffffff]">
           <th></th>
           <th>経過月</th>
           <th>貯金額</th>

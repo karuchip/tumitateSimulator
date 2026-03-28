@@ -78,8 +78,8 @@ const CoastFireChart = ({
     {
       label: "積立を続けた場合の資産推移",
       data: continueData ? continueData.map(d => Math.floor(d.pv)) : [],
-      borderColor: "#59CAB2",
-      backgroundColor: "#8bf9e184",
+      borderColor: "#5997ca",
+      backgroundColor: "#5997ca56",
       tension: 0.3,
       fill: "start",
       pointRadius: 0,
@@ -91,8 +91,8 @@ const CoastFireChart = ({
     datasets.push({
       label: "FIRE達成後に積立を停止した場合の資産推移",
       data: coastStopData ? coastStopData.map(d => Math.floor(d.pv)) : [],
-      borderColor: "#ff6334ff",
-      backgroundColor: "#fd917099",
+      borderColor: "#a9556e",
+      backgroundColor: "#eba8bc9a",
       borderDash: [6, 6],
       tension: 0.3,
       fill: "start",
@@ -100,7 +100,6 @@ const CoastFireChart = ({
       order: 1,
     });
   }
-
   const data = {
     labels,
     datasets,

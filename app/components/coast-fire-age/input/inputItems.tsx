@@ -9,7 +9,7 @@ export default function InputItems() {
 
   return(
     <>
-      <div className="InputContainer">
+      <div className="InputContainerPink">
         <div>
           <h3>Step1. あなたの今の状況</h3>
 
@@ -110,7 +110,7 @@ export default function InputItems() {
                       marks
                       min={0}
                       max={20}
-                      sx={{ color: "#60A092" }}
+                      sx={{ color: "#C36782" }}
                     />
                     <span style={{fontWeight:"bold"}}>{rate}%</span>
                   </div>

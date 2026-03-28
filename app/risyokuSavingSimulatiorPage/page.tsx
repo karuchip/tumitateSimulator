@@ -57,11 +57,11 @@ const RisyokuSavingSimulator = () => {
         <div className="SimulatorCoastContainer">
           <div className="co-screenPosition">
             <div>
-              <div className="co-midashi2sentBlackContainer">
+              <div className="co-midashi2sentOrangeContainer">
                 <span></span>
-                <div className="co-midashi2sentBlack">
+                <div className="co-midashi2sentOrange">
                   <p>もし今、1年休んだら貯金はいくら残る？</p>
-                  <p>離職期間の貯金推移シュミレーター</p>
+                  <h1>離職期間の貯金推移シュミレーター</h1>
                 </div>
               </div>
 
@@ -83,11 +83,11 @@ const RisyokuSavingSimulator = () => {
               <FormProvider {...methods}>
                 <form onSubmit={methods.handleSubmit(onSubmit)} className="SimulatorCoastContainerLeft">
 
-                  <div className="SimulatorCoastInputContainer">
+                  <div className="SimulatorCoastInputContainerOrange">
                     <InputItems/>
                   </div>
 
-                  <div className="co-simulationButton">
+                  <div className="co-simulationButtonBlue">
                     <button type="submit">シュミレーションする</button>
                   </div>
                 </form>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/common/header";
 import Script from "next/script";
+import Footer from "./components/common/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "コーストFIREの達成時期や必要な積立額を簡単にシミュレーションできる無料ツール。毎月の積立額や運用利回りをもとに、あなたの資産の成長をグラフで確認できます。",
   keywords:
-    "コーストFIRE, FIRE, 積立シミュレーター, 資産運用, 投資, 早期リタイア, ライフプラン, FIREシミュレーション",
+    "コーストFIRE, コーストfire, FIRE, 積立シミュレーター, 資産運用, 投資, 早期リタイア, ライフプラン, FIREシミュレーション, コーストファイア",
   openGraph: {
     title: "コーストFIREシミュレーター",
     description:
@@ -44,10 +45,13 @@ export default function RootLayout({
 
       <meta name="google-site-verification" content="biy4sIgzLgimCatn7P5ZKbg7rFLvrwNeeH1nnYJohKI" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header/>
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer/>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-K29NWP3NDG" />
         <Script id="google-analytics">

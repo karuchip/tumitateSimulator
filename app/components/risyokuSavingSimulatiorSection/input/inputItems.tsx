@@ -38,7 +38,7 @@ const InputItems = () => {
   return(
     <>
 
-      <div className="InputContainer">
+      <div className="InputContainerOrange">
         <h3>Step1. あなたの状況</h3>
 
         <div className="risyokuSavingInputYourSituation">
