@@ -506,7 +506,7 @@ input {
   justify-content: space-between;
   padding: 10px;
   align-items: center;
-  background-color: #dddddd;
+  background-color: #8b8b8b;
   position: fixed;
   top: 0;
   left: 0;
@@ -517,7 +517,10 @@ input {
   width: fit-content;
   font-size: 18px;
   font-weight: bold;
-  color: #050505;
+  color: #ffffff;
+}
+.headerContent h1:hover {
+  color: #808080;
 }
 
 
@@ -769,7 +772,7 @@ input {
 }
 @media screen and (min-width: 1024px) {
   .mensekiContent {
-    padding: 20px 60px;
+    padding: 30px 60px;
   }
 }
 .mensekiContent h3 {
@@ -800,12 +803,6 @@ input {
   width: fit-content;
   font-weight: bold;
 }
-/* .menuItemContainer {
-  margin-top: 10px;
-} */
-/* .menuItemsContent {
-  position: relative;
-} */
 .menuItems {
   /* position: absolute; */
   top: 0;
