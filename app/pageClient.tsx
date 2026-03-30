@@ -17,6 +17,7 @@ export default function HomeClient() {
             <h1 className="text-[26px] lg:text-[42px] font-bold text-[#808080]">コーストFIREシミュレーター</h1>
             <p className="text-[14px] lg:!text-[24px] text-[#808080]">毎月いくらで達成できる？</p>
           </div>
+          <p className="text-[14px] lg:!text-[16px] text-[#60A092] w-[280px] lg:w-fit mx-auto mt-6">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
         </FadeIn>
 
         {/* コーストFIREシュミレーター(2個) */}
@@ -151,7 +152,7 @@ export default function HomeClient() {
 
           <FadeIn>
             <div className="text-center mb-8 lg:mb-12">
-              <h2 className="text-[26px] lg:text-[42px] font-bold text-[#808080] pt-15 lg:pt-20">資産推移シミュレーター</h2>
+              <h2 className="text-[26px] lg:text-[32px] font-bold text-[#808080] pt-15 lg:pt-20">資産推移シミュレーター</h2>
             </div>
           </FadeIn>
 
