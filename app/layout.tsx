@@ -16,16 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "コーストFIREシミュレーター｜毎月いくらで達成できる？",
-  description:
-    "コーストFIREの達成時期や必要な積立額を簡単にシミュレーションできる無料ツール。毎月の積立額や運用利回りをもとに、あなたの資産の成長をグラフで確認できます。",
-  keywords:
-    "コーストFIRE, コーストfire, FIRE, 積立シミュレーター, 資産運用, 投資, 早期リタイア, ライフプラン, FIREシミュレーション, コーストファイア",
   openGraph: {
     title: "コーストFIREシミュレーター",
     description:
       "コーストFIRE達成までの積立金額を簡単に計算できる無料アプリです。",
-    url: "https://tumitate-simulator.vercel.app",
+    url: "https://fire.hika-design.com",
     siteName: "コーストFIREシミュレーター",
     locale: "ja_JP",
     type: "website",
