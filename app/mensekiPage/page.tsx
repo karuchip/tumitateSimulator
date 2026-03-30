@@ -1,3 +1,4 @@
+import { FadeIn } from "../components/animation/fadeIn"
 import Menseki from "../components/common/Menseki"
 
 
@@ -6,7 +7,9 @@ const MensekiPage = () => {
     <section className="mensekiContainer mensekiPage">
       <div className="co-screenPosition">
         {/* 免責事項 */}
-        <Menseki/>
+        <FadeIn>
+          <Menseki/>
+        </FadeIn>
       </div>
     </section>
   )
