@@ -3,27 +3,31 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://tumitate-simulator.vercel.app",
+      url: "https://fire.hika-design.com/",
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/coastFirePage",
+      url: "https://fire.hika-design.com/coastFirePage",
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/coast-fire-age",
+      url: "https://fire.hika-design.com/coast-fire-age",
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/risyokuSavingSimulatiorPage",
+      url: "https://fire.hika-design.com/risyokuSavingSimulatiorPage",
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/mensekiPage",
+      url: "https://fire.hika-design.com/mensekiPage",
       lastModified: new Date(),
     },
     {
-      url: "https://tumitate-simulator.vercel.app/feedbackForm",
+      url: "https://fire.hika-design.com/privacypolicy",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://fire.hika-design.com/feedbackForm",
       lastModified: new Date(),
     },
   ];
