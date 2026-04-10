@@ -160,6 +160,7 @@ input {
   gap: 10px;
   align-items: center;
   margin-bottom: 20px !important;
+  color: #60A092;
 }
 .co-midashi2sentBlackContainer span {
   display: block;
@@ -175,6 +176,10 @@ input {
   align-items: center;
   margin-bottom: 20px !important;
 }
+.co-midashi2sentRedContainer p {
+  color: #DA93A7;
+  font-weight: bold;
+}
 .co-midashi2sentRedContainer span {
   display: block;
   width: 10px;
@@ -188,6 +193,10 @@ input {
   gap: 10px;
   align-items: center;
   margin-bottom: 20px !important;
+}
+.co-midashi2sentOrangeContainer p {
+  color: #EB9D48;
+  font-weight: bold;
 }
 .co-midashi2sentOrangeContainer span {
   display: block;
@@ -260,8 +269,9 @@ input {
   background-color: #A3C5BE;
 }
 .co-komidashiGreen h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
+  margin-bottom: 7px;
 }
 
 /* 子見出し ピンク */
@@ -269,6 +279,7 @@ input {
   display: flex;
   gap: 5px;
   align-items: center;
+  margin-bottom: 7px;
 }
 .co-komidashiPink span{
   display: block;
@@ -277,7 +288,7 @@ input {
   background-color: #DA93A7;
 }
 .co-komidashiPink h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -286,6 +297,7 @@ input {
   display: flex;
   gap: 5px;
   align-items: center;
+  margin-bottom: 7px;
 }
 .co-komidashiOrange span{
   display: block;
@@ -294,7 +306,7 @@ input {
   background-color: #EB9D48;
 }
 .co-komidashiOrange h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -568,7 +580,7 @@ input {
 }
 @media screen and (min-width:1024px) {
   .SimulatorCoastDescription {
-    font-size: 22px !important;
+    font-size: 18px !important;
   }
 }
 .toMenseki {
@@ -623,8 +635,8 @@ input {
 /* 入力画面 app/components/coastFireSection/input/inputItems.tsx */
 .InputContainer h3{
   font-weight: bold;
-  color:#60A092;
-  border-bottom: 1px solid #60A092;
+  color:#238479;
+  border-bottom: 1px solid #238479;
   width: fit-content;
 }
 .InputContainerPink h3 {
@@ -664,9 +676,12 @@ input {
 }
 
 .coastTumitateResultAmount .one {
-  font-size: 32px;
+  font-size: 42px;
 }
 .coastTumitateResultAmount .two {
+  font-size: 20px !important;
+}
+.coastTumitateResultAmount .three {
   font-size: 16px;
 }
 
@@ -677,7 +692,7 @@ input {
 }
 
 .coastTumitateResultAmountGraph {
-  padding: 30px;
+  padding: 20px !important;
 }
 @media screen and (min-width: 1024px) {
   .coastTumitateResultAmountGraph {
@@ -881,7 +896,7 @@ input {
 
 /* 達成年齢シュミレーター　結果 */
 .ageResultAmount .one {
-  margin: 10px 0;
+  margin: 0 !important;
   text-align: center;
   padding: 10px 0;
 }
@@ -906,7 +921,7 @@ input {
 /* 離職期間の結果表 */
 /* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
 .risyokuResultAmount .one {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   text-align: center;
   padding: 10px 0;
 }

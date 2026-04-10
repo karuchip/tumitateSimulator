@@ -35,7 +35,7 @@ const DummyTumitateResult = () => {
                 <p className="two">
                   xx歳でコーストFIREを達成できる見込みです
                 </p>
-                <p className="two">（運用利回り: xx％） </p>
+                <p className="three">（運用利回り: xx％） </p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ const DummyTumitateResult = () => {
                 <span></span>
                 <h3>資産推移見込み</h3>
               </div>
-              <div className="w-full border border-[#59CAB2] rounded-none overflow-hidden mt-2">
+              <div className="w-full border border-[#59CAB2] rounded-none overflow-hidden">
                 {/* タブ部分 */}
                 <div className="flex text-center font-medium">
                   <button
