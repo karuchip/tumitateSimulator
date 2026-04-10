@@ -7,7 +7,7 @@ const Header = () => {
   return(
     <>
       <div className='headerContent'>
-        <Link href="/"><h1>コーストFIREシュミレーター</h1></Link>
+        <Link href="/"><h1>コーストFIREシミュレーター</h1></Link>
         <TemporaryDrawer/>
       </div>
     </>

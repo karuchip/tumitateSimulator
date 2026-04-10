@@ -343,7 +343,7 @@ input {
   background-color: #fff;
 }
 /* ボタン類 */
-/* シュミレーションボタン */
+/* シミュレーションボタン */
 /* メインボタン */
 .co-simulationButton {
   display: flex;
@@ -460,7 +460,7 @@ input {
   text-align: start;
   padding-top: 3px;
 }
-/* アイコン類(離職シュミレーター) */
+/* アイコン類(離職シミュレーター) */
 /* グリーンアイコン */
 .co-iconGreen {
   width: 14px;
@@ -557,7 +557,7 @@ input {
 }
 
 
-/* 積立金額シュミレーター app/components/coastFireSection/coastFireSimulation.tsx */
+/* 積立金額シミュレーター app/components/coastFireSection/coastFireSimulation.tsx */
 .SimulatorCoastContainer {
   background-color: #fff;
   padding: 30px 0;
@@ -845,7 +845,7 @@ input {
 }
 
 
-/* 離職期間の貯金推移シュミレーター */
+/* 離職期間の貯金推移シミュレーター */
 /* (app/components/risyokuSavingSimulatiorSection/input/inputItems.tsx) */
 .risyokuSavingInputYourSituation {
   margin: 20px 0;
@@ -894,7 +894,7 @@ input {
   margin-bottom: 5px;
 }
 
-/* 達成年齢シュミレーター　結果 */
+/* 達成年齢シミュレーター　結果 */
 .ageResultAmount .one {
   margin: 0 !important;
   text-align: center;
@@ -982,7 +982,7 @@ input {
 }
 
 
-/* コーストFIRE達成年齢シュミレーター app/coastFireAgeOfAchievementPage/page.tsx() */
+/* コーストFIRE達成年齢シミュレーター app/coastFireAgeOfAchievementPage/page.tsx() */
 .ageGraphContainer {
   width: 320px;
   margin: 0 auto;
