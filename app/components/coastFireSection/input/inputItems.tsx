@@ -10,12 +10,12 @@ export default function InputItems() {
     <>
       <div className="InputContainer">
         <div>
-          <h3>Step1. あなたの今の状況</h3>
+          <h3>現在の状況</h3>
 
           <div className="InputYourSituation">
 
             <label>
-              <p className="inputItems">1. 現在の年齢</p>
+              <p className="inputItems">- 年齢</p>
               <input
                 type="number"
                 placeholder="30"
@@ -39,7 +39,7 @@ export default function InputItems() {
             </label>
 
             <label>
-              <p className="inputItems">2. 運用中の資産額</p>
+              <p className="inputItems">- 運用中の資産額</p>
               <input
                 type="number"
                 placeholder="50"
@@ -61,10 +61,14 @@ export default function InputItems() {
                 <p className="co-inputErrorMsg">{errors.currentAsset.message as string}</p>
               )}
             </label>
+          </div>
+
+          <div className="mt-10">
+            <h3>運用条件</h3>
 
             {/* 運用利回り */}
             <label>
-              <p className="inputItems">3. 運用利回り(年率)</p>
+              <p className="inputItems">- 運用利回り(年率)</p>
 
               <Controller
                 name="rate"
@@ -92,11 +96,11 @@ export default function InputItems() {
         </div>
 
         <div className="yourGoal">
-          <h3>Step2. 目標設定</h3>
+          <h3>目標</h3>
 
-          <div>
+          <div className="pb-4">
             <label>
-              <p className="inputItems">1. 老後に必要な資金</p>
+              <p className="inputItems">- 老後に必要な資金</p>
               <input
                 type="number"
                 placeholder="2,000"
@@ -120,7 +124,7 @@ export default function InputItems() {
             </label>
 
             <label>
-              <p className="inputItems">2. 老後資金を受け取りたい年齢</p>
+              <p className="inputItems">- 老後資金を受け取りたい年齢</p>
               <input
                 type="number"
                 placeholder="65"
@@ -146,8 +150,8 @@ export default function InputItems() {
 
             <label>
               <div className="inputItems">
-                <p>3. コーストFIREを達成したい年齢</p>
-                <p style={{fontSize:"13px", marginLeft:"8px"}}>（積立をやめる予定の年齢）</p>
+                <p>- コーストFIREを達成したい年齢</p>
+                <p style={{fontSize:"13px", marginLeft:"4px"}}>（積立を卒業したい年齢）</p>
               </div>
               <input
                 type="number"

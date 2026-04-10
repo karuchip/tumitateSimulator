@@ -219,13 +219,13 @@ const CoastFireAgeClient = () => {
               </div>
             )}
 
+            <div className="co-komidashiPink">
+              <span></span>
+              <h3>資産推移見込み</h3>
+            </div>
             <div className="ageGraphContainer">
               {simulationResult?.trajectory && (
                 <div>
-                  <div className="co-komidashiPink">
-                    <span></span>
-                    <h3>資産推移見込み</h3>
-                  </div>
                   <CoastFireChart continueData={simulationResult.trajectory} coastStopData={simulationResult.achievedResult} coastFireAge={simulationResult?.coastFireAge}/>
                 </div>
               )}

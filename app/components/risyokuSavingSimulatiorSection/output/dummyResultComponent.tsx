@@ -36,7 +36,7 @@ const dummyResultComponent = () => {
               <h3>貯金額の推移</h3>
             </div>
 
-            <div className="w-full border border-[#ebc091] rounded-none overflow-hidden mt-2">
+            <div className="w-full border border-[#ebc091] rounded-none overflow-hidden">
 
               {/* グラフ */}
               <div>
