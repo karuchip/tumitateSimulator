@@ -16,7 +16,7 @@ const DummyTumitateResult = () => {
 
             <div className="co-midashiGreen">
               <span></span>
-              <h1>シュミレーション結果</h1>
+              <h1>シミュレーション結果</h1>
             </div>
 
           <div className="SimulatorCoastResultSection">

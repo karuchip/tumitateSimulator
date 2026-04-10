@@ -27,7 +27,7 @@ const RisyokuClient = () => {
   // 計算結果
   const [result, setResult] = useState<RisyokuSavingSimulationOutput>()
 
-  // シュミレーションボタン押下時、計算呼び出し
+  // シミュレーションボタン押下時、計算呼び出し
   const onSubmit = (data: RisyokuSavingSimulationInput) => {
 
     try {
@@ -47,7 +47,7 @@ const RisyokuClient = () => {
       }
     }
   }
-  // シュミレーション後のページ遷移用
+  // シミュレーション後のページ遷移用
   const resultRef = useRef<HTMLElement | null>(null);
 
   return(
@@ -61,13 +61,13 @@ const RisyokuClient = () => {
                 <span></span>
                 <div className="co-midashi2sentOrange">
                   <p>もし今、1年休んだら貯金はいくら残る？</p>
-                  <h1>離職期間の貯金推移シュミレーター</h1>
+                  <h1>離職期間の貯金推移シミュレーター</h1>
                 </div>
               </div>
 
               <p className="SimulatorCoastDescription">
                 今の資産・支出・収入から「あと何ヶ月貯金が持つ？」をシュミレートします。
-                FIRE前後やキャリアブレイク時の資産計算に最適のシュミレーターです。
+                FIRE前後やキャリアブレイク時の資産計算に最適のシミュレーターです。
               <a href="#menseki" className="toMenseki">（免責事項をご確認ください）</a>
               </p>
 
@@ -88,7 +88,7 @@ const RisyokuClient = () => {
                   </div>
 
                   <div className="co-simulationButtonBlue">
-                    <button type="submit">シュミレーションする</button>
+                    <button type="submit">シミュレーションする</button>
                   </div>
                 </form>
               </FormProvider>

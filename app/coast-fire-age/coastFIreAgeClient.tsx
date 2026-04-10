@@ -37,7 +37,7 @@ const CoastFireAgeClient = () => {
     retiredAge: 65,
   }
 
-  // シュミレーション結果を入れるuseState
+  // シミュレーション結果を入れるuseState
   const [simulationResult, setSimulationResult] = useState<{
     trajectory: OutputProps[],
     coastFireAge: number | null,
@@ -102,7 +102,7 @@ const CoastFireAgeClient = () => {
               <span></span>
               <div className="co-midashi2sentBlack">
                 <p>何歳で達成できる？</p>
-                <h1>コーストFIREシュミレーター（達成年齢計算）</h1>
+                <h1>コーストFIREシミュレーター（達成年齢計算）</h1>
               </div>
             </div>
 
@@ -134,7 +134,7 @@ const CoastFireAgeClient = () => {
         <div className="SimulatorCoastResult co-kakomiGreen ageResultContainer">
           <div className="co-midashiPink">
             <span></span>
-            <h1>シュミレーション結果</h1>
+            <h1>シミュレーション結果</h1>
           </div>
 
           <div className="SimulatorCoastResultSection">

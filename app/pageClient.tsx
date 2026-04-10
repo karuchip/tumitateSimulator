@@ -20,11 +20,11 @@ export default function HomeClient() {
           <p className="text-[14px] lg:!text-[16px] text-[#60A092] w-[280px] lg:w-fit mx-auto mt-6">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
         </FadeIn>
 
-        {/* コーストFIREシュミレーター(2個) */}
+        {/* コーストFIREシミュレーター(2個) */}
         <div className="my-8 lg:my-14">
 
           <FadeIn>
-            {/* 積み立て金額シュミレーター */}
+            {/* 積み立て金額シミュレーター */}
             <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mx-auto lg:ml-20">
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
@@ -33,7 +33,7 @@ export default function HomeClient() {
                 <div className="flex gap-4 justify-center px-4 lg-px:0">
                   {/* 画像(フルスクリーンのみ表示) */}
                   <div className="hidden lg:block">
-                    <Image src="/home/homeImage1.png" height={400} width={300} alt="積立金額シュミレーター"/>
+                    <Image src="/home/homeImage1.png" height={400} width={300} alt="積立金額シミュレーター"/>
                   </div>
 
                   {/* テキスト */}
@@ -43,7 +43,7 @@ export default function HomeClient() {
                       <div className="bg-[#60A092] w-[10px] h-[60px] lg:h-[80px]">
                         <span></span>
                       </div>
-                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#60A092] text-base/8 lg:text-base/12">積立金額<br/>シュミレーター</h2>
+                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#60A092] text-base/8 lg:text-base/12">積立金額<br/>シミュレーター</h2>
                     </div>
                     <p className="text-[#808080] text-[16px] lg:!text-[18px]">何歳で「積立卒業(=コーストFIRE)」したい？<br/>そのために<span className="font-bold">毎月いくら必要か</span>を、かんたんに逆算できます。</p>
 
@@ -84,7 +84,7 @@ export default function HomeClient() {
 
 
           <FadeIn>
-            {/* 達成年齢シュミレーター */}
+            {/* 達成年齢シミュレーター */}
             <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mt-10 lg:mt-15  mx-auto lg:mr-20">
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
@@ -99,7 +99,7 @@ export default function HomeClient() {
                       <div className="bg-[#C36782] w-[10px] h-[60px] lg:h-[80px]">
                         <span></span>
                       </div>
-                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#C36782] text-base/8 lg:text-base/12">達成年齢<br/>シュミレーター</h2>
+                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#C36782] text-base/8 lg:text-base/12">達成年齢<br/>シミュレーター</h2>
                     </div>
                     <p className="text-[#808080] text-[16px] lg:!text-[18px]">今の積立額だと<span className="font-bold">何歳でコーストFIRE達成できる？</span>を簡単にシミュレートできます。</p>
 
@@ -136,7 +136,7 @@ export default function HomeClient() {
 
                   {/* 画像(フルスクリーンのみ表示) */}
                   <div className="hidden lg:block">
-                    <Image src="/home/homeImage2.png" height={400} width={300} alt="達成年齢シュミレーター"/>
+                    <Image src="/home/homeImage2.png" height={400} width={300} alt="達成年齢シミュレーター"/>
                   </div>
 
                 </div>
@@ -147,7 +147,7 @@ export default function HomeClient() {
 
 
 
-        {/* 資産推移シュミレーター */}
+        {/* 資産推移シミュレーター */}
         <div className="mt-20 lg:mt-30 bg-[#FCFFE1] pb-20">
 
           <FadeIn>
@@ -157,7 +157,7 @@ export default function HomeClient() {
           </FadeIn>
 
           <FadeIn>
-            {/* 離職期間の貯金推移シュミレーター */}
+            {/* 離職期間の貯金推移シミュレーター */}
             <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg bg-[#ffffff]  mx-auto">
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
@@ -166,7 +166,7 @@ export default function HomeClient() {
                 <div className="flex gap-4 justify-center px-4 lg-px:0">
                   {/* 画像(フルスクリーンのみ表示) */}
                   <div className="hidden lg:block">
-                    <Image src="/home/homeImage3.png" height={400} width={300} alt="資産推移シュミレーター"/>
+                    <Image src="/home/homeImage3.png" height={400} width={300} alt="資産推移シミュレーター"/>
                   </div>
 
                   {/* テキスト */}
@@ -176,9 +176,9 @@ export default function HomeClient() {
                       <div className="bg-[#DF821E] w-[10px] h-[60px] lg:h-[80px]">
                         <span></span>
                       </div>
-                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#DF821E] text-base/8 lg:text-base/12">離職期間の貯金推移<br/>シュミレーター</h2>
+                      <h2 className="text-[22px] lg:text-[32px] font-bold text-[#DF821E] text-base/8 lg:text-base/12">離職期間の貯金推移<br/>シミュレーター</h2>
                     </div>
-                    <p className="text-[#808080] text-[16px] lg:!text-[18px]">今の資産・支出・収入から<span className="font-bold">「あと何ヶ月貯金が持つ？」</span>をシュミレートします。<br/> FIRE前後やキャリアブレイク時の資産計算に最適のシュミレーターです。</p>
+                    <p className="text-[#808080] text-[16px] lg:!text-[18px]">今の資産・支出・収入から<span className="font-bold">「あと何ヶ月貯金が持つ？」</span>をシュミレートします。<br/> FIRE前後やキャリアブレイク時の資産計算に最適のシミュレーターです。</p>
 
                     {/* 区切り棒 */}
                     <div className="w-auto h-[1px] bg-[#EB9D48] my-3 lg:my-4">

@@ -14,7 +14,7 @@ import DummyTorikuzushiResult from "./output/dummyTorikuzushiResult";
 
 export default function CoastFireSimulation() {
 
-  // シュミレーション後のページ遷移用
+  // シミュレーション後のページ遷移用
   const resultRef = useRef<HTMLElement>(null)
 
 
@@ -31,7 +31,7 @@ export default function CoastFireSimulation() {
   const {handleSubmit} = methods;
 
 
-  // 積立金額シュミレーション結果
+  // 積立金額シミュレーション結果
   const [simulationResult, setSimulationResult] = useState<{
     pvNeeded: number;
     pvFuture: number;
@@ -148,7 +148,7 @@ export default function CoastFireSimulation() {
 
                   <div className="co-simulationButton">
                     <button type="submit">
-                      シュミレーションする
+                      シミュレーションする
                     </button>
                   </div>
 

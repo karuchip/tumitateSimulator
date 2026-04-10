@@ -53,7 +53,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <TollIcon />
               </ListItemIcon>
-              コーストFIRE 積立金額シュミレーター
+              コーストFIRE 積立金額シミュレーター
               <ListItemText/>
             </ListItemButton>
           </Link>
@@ -67,7 +67,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <DirectionsRunIcon />
               </ListItemIcon>
-              コーストFIRE 達成年齢シュミレーター
+              コーストFIRE 達成年齢シミュレーター
               <ListItemText/>
             </ListItemButton>
           </Link>
@@ -82,7 +82,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <HotelIcon />
               </ListItemIcon>
-              離職期間の貯金推移シュミレーター
+              離職期間の貯金推移シミュレーター
               <ListItemText/>
             </ListItemButton>
           </Link>
