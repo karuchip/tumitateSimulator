@@ -14,20 +14,16 @@ export default function HomeClient() {
 
         <FadeIn>
           <div className="pb-0 md:pb-8">
-            <div className="text-center">
+            <div className="text-center mb-6">
               <h1 className="text-[26px] lg:text-[42px] font-bold text-[#808080]">コーストFIREシミュレーター</h1>
               <p className="text-[14px] lg:!text-[24px] text-[#808080]">毎月いくらで達成できる？</p>
             </div>
-            <div className="my-14 md:my-10 border border-indigo-600/40 g mt-6 w-[280px] lg:w-fit p-4 md:p-6 mx-auto">
-              <p className="text-[14px] lg:!text-[16px]">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
-              <div className="w-fit mx-auto">
-                <Link
-                  href="/coast-fire-article"
-                  className="inline-block mt-6 bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-                  >
-                  → コーストFIREとは？
-                </Link>
-              </div>
+            <div className="w-[280px] lg:w-fit p-4 md:p-4 mx-auto">
+              <p className="text-[14px] text-[#808080] lg:!text-[16px]">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
+              <p className="text-[#808080]">
+                コーストFIREの詳しい解説は
+                <a href="/coast-fire-article" className="text-indigo-600/70 hover:text-indigo-600 font-bold">こちら</a>
+              </p>
             </div>
           </div>
         </FadeIn>
@@ -35,13 +31,7 @@ export default function HomeClient() {
         {/* コーストFIREシミュレーター(2個) */}
 
 
-        <div className="py-8 md:pb-16 bg-gray-500/5">
-
-          <FadeIn>
-            <div className="text-center">
-              <p className="text-[14px] lg:!text-[24px] text-indigo-600 mb-8">シミュレーター一覧</p>
-            </div>
-          </FadeIn>
+        <div className="pt-4 pb-16">
 
           <FadeIn>
             {/* 積み立て金額シミュレーター */}
@@ -168,7 +158,7 @@ export default function HomeClient() {
 
 
         {/* 資産推移シミュレーター */}
-        <div className="bg-[#ffffff] pb-20">
+        <div className="bg-[#ffffff] pb-20 bg-gray-500/10">
 
           <FadeIn>
             <div className="text-center mb-8 lg:mb-12">
