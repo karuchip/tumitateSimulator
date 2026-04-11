@@ -13,19 +13,39 @@ export default function HomeClient() {
       <div className="pt-30 lg:pt-36">
 
         <FadeIn>
-          <div className="text-center">
-            <h1 className="text-[26px] lg:text-[42px] font-bold text-[#808080]">コーストFIREシミュレーター</h1>
-            <p className="text-[14px] lg:!text-[24px] text-[#808080]">毎月いくらで達成できる？</p>
+          <div className="pb-0 md:pb-8">
+            <div className="text-center">
+              <h1 className="text-[26px] lg:text-[42px] font-bold text-[#808080]">コーストFIREシミュレーター</h1>
+              <p className="text-[14px] lg:!text-[24px] text-[#808080]">毎月いくらで達成できる？</p>
+            </div>
+            <div className="my-14 md:my-10 border border-indigo-600/40 g mt-6 w-[280px] lg:w-fit p-4 md:p-6 mx-auto">
+              <p className="text-[14px] lg:!text-[16px]">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
+              <div className="w-fit mx-auto">
+                <Link
+                  href="/coast-fire-article"
+                  className="inline-block mt-6 bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
+                  >
+                  → コーストFIREとは？
+                </Link>
+              </div>
+            </div>
           </div>
-          <p className="text-[14px] lg:!text-[16px] text-[#60A092] w-[280px] lg:w-fit mx-auto mt-6">コーストFIREとは、若いうちに資産形成を行い、その後は運用のみで老後資金を増やす手法です。</p>
         </FadeIn>
 
         {/* コーストFIREシミュレーター(2個) */}
-        <div className="my-8 lg:my-14">
+
+
+        <div className="py-8 md:pb-16 bg-gray-500/5">
+
+          <FadeIn>
+            <div className="text-center">
+              <p className="text-[14px] lg:!text-[24px] text-indigo-600 mb-8">シミュレーター一覧</p>
+            </div>
+          </FadeIn>
 
           <FadeIn>
             {/* 積み立て金額シミュレーター */}
-            <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mx-auto lg:ml-20">
+            <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mx-auto lg:ml-20 bg-[#ffffff]">
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
               {/* リンク */}
@@ -85,7 +105,7 @@ export default function HomeClient() {
 
           <FadeIn>
             {/* 達成年齢シミュレーター */}
-            <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mt-10 lg:mt-15  mx-auto lg:mr-20">
+            <div className="relative group lg:w-[800px] w-[280px] border border-[#C3C3C3] py-4 overflow-hidden shadow-lg mt-10 lg:mt-15  mx-auto lg:mr-20 bg-[#ffffff]">
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
               {/* リンク */}
@@ -148,7 +168,7 @@ export default function HomeClient() {
 
 
         {/* 資産推移シミュレーター */}
-        <div className="mt-20 lg:mt-30 bg-[#FCFFE1] pb-20">
+        <div className="bg-[#ffffff] pb-20">
 
           <FadeIn>
             <div className="text-center mb-8 lg:mb-12">
