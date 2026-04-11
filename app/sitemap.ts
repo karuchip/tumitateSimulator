@@ -30,5 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://fire.hika-design.com/feedbackForm",
       lastModified: new Date(),
     },
+    {
+      url: "https://fire.hika-design.com/coast-fire-article",
+      lastModified: new Date(),
+    },
   ];
 }

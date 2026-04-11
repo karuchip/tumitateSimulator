@@ -18,6 +18,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import Link from 'next/link';
 
 export default function TemporaryDrawer() {
@@ -32,7 +33,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/"}>
+          <Link href={"/"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <HomeIcon />
@@ -44,11 +45,25 @@ export default function TemporaryDrawer() {
         </ListItem>
       </List>
 
+      <List>
+        <ListItem disablePadding>
+          <Link href={"/coast-fire-article"} className='w-full'>
+            <ListItemButton>
+              <ListItemIcon>
+                <LightbulbIcon />
+              </ListItemIcon>
+              コーストFIREとは？
+              <ListItemText/>
+            </ListItemButton>
+          </Link>
+        </ListItem>
+      </List>
+
       <Divider />
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/coastFirePage"}>
+          <Link href={"/coastFirePage"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <TollIcon />
@@ -62,7 +77,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/coast-fire-age"}>
+          <Link href={"/coast-fire-age"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <DirectionsRunIcon />
@@ -77,7 +92,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/risyokuSavingSimulatiorPage"}>
+          <Link href={"/risyokuSavingSimulatiorPage"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <HotelIcon />
@@ -93,7 +108,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/mensekiPage"}>
+          <Link href={"/mensekiPage"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <WarningIcon />
@@ -105,7 +120,7 @@ export default function TemporaryDrawer() {
         </ListItem>
 
         <ListItem disablePadding>
-          <Link href={"/privacypolicy"}>
+          <Link href={"/privacypolicy"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <PrivacyTipIcon />
@@ -117,7 +132,7 @@ export default function TemporaryDrawer() {
         </ListItem>
 
         <ListItem disablePadding>
-          <Link href={"/feedbackForm"}>
+          <Link href={"/feedbackForm"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <MailIcon />
