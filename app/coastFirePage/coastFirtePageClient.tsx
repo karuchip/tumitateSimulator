@@ -4,6 +4,7 @@ import AboutCoastFire from "../components/coastFireSection/aboutCoastFire";
 import HowToUse from "../components/coastFireSection/howtouse";
 import CoastFireSimulation from "../components/coastFireSection/simulation";
 import Menseki from "../components/common/Menseki";
+import ShareCoastFire from "../components/share/coast-fire/page";
 
 export default function CoastFirePageClient() {
 
@@ -13,7 +14,9 @@ export default function CoastFirePageClient() {
       <section>
         <CoastFireSimulation/>
         <FadeIn>
-          <AboutCoastFire/>
+          <div className="flex justify-center mb-10">
+            <ShareCoastFire/>
+          </div>
         </FadeIn>
         <HowToUse/>
 
