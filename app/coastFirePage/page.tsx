@@ -8,7 +8,6 @@ export const metadata = {
     openGraph: {
       title: "コーストFIREに必要な積立額はいくら？",
       description: "あなたは毎月いくら積み立てれば達成できる？",
-      url: "https://fire.hika-design.com/coastFirePage",
       siteName: "コーストFIREシミュレーター",
       images: [
       {
