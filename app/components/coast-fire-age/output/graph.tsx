@@ -138,6 +138,7 @@ const CoastFireChart = ({
       legend: {
         position: "top" as const,
         labels: {
+          padding: 5,
           font: {
             size: 14,
             weight: 500,
@@ -209,7 +210,6 @@ const CoastFireChart = ({
   };
 
   return (
-    // <div className="relative h-full w-full">
     <div className="relative h-[350px] w-full">
       <Line data={data} options={options} />
     </div>

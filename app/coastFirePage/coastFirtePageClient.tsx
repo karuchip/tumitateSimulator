@@ -14,13 +14,8 @@ export default function CoastFirePageClient() {
 
       <section>
         <CoastFireSimulation/>
-        <FadeIn>
-          <HowToUseFireSection/>
-        </FadeIn>
-        <FadeIn>
-          <CoastFireDefinition/>
-        </FadeIn>
-
+        <HowToUseFireSection/>
+        <CoastFireDefinition/>
         <FireLogicExplanation/>
 
         <div className="flex justify-center mb-10">
