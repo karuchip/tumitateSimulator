@@ -1,8 +1,9 @@
 "use client"
 import { FadeIn } from "../components/animation/fadeIn";
-import AboutCoastFire from "../components/coastFireSection/aboutCoastFire";
-import HowToUse from "../components/coastFireSection/howtouse";
+import FireLogicExplanation from "../components/coastFireSection/fire-logicexplanation";
+import HowToUseFireSection from "../components/coastFireSection/howtouse";
 import CoastFireSimulation from "../components/coastFireSection/simulation";
+import CoastFireDefinition from "../components/common/coast-fire-definition";
 import Menseki from "../components/common/Menseki";
 import ShareCoastFire from "../components/share/coast-fire/page";
 
@@ -14,11 +15,19 @@ export default function CoastFirePageClient() {
       <section>
         <CoastFireSimulation/>
         <FadeIn>
-          <div className="flex justify-center mb-10">
-            <ShareCoastFire/>
-          </div>
+          <HowToUseFireSection/>
         </FadeIn>
-        <HowToUse/>
+        <FadeIn>
+          <CoastFireDefinition/>
+        </FadeIn>
+
+        <FireLogicExplanation/>
+
+        <div className="flex justify-center mb-10">
+          <ShareCoastFire/>
+        </div>
+
+
 
       </section>
 

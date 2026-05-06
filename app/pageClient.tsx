@@ -5,6 +5,8 @@ import Image from "next/image";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { FadeIn } from "./components/animation/fadeIn";
 import MensekiPage from "./mensekiPage/page";
+import { Fade } from "@mui/material";
+import CoastFireDefinition from "./components/common/coast-fire-definition";
 
 export default function HomeClient() {
   return (
@@ -152,6 +154,10 @@ export default function HomeClient() {
                 </div>
               </Link>
             </div>
+          </FadeIn>
+
+          <FadeIn>
+            <CoastFireDefinition/>
           </FadeIn>
         </div>
 

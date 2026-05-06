@@ -9,8 +9,10 @@ import InputItems from "@/app/components/coast-fire-age/input/inputItems"
 import { useState, useEffect, useMemo } from "react";
 import CoastFireChart from "@/app/components/coast-fire-age/output/graph"
 import Menseki from "@/app/components/common/Menseki"
-import TagFacesIcon from '@mui/icons-material/TagFaces';
 import HowToUseAchieveSection from "../components/coast-fire-age/howtouse";
+import AgeLogicExplanation from "../components/coast-fire-age/age-logicexplanation";
+import HowToUseAgeSection from "../components/coast-fire-age/howtouse";
+import CoastFireDefinition from "../components/common/coast-fire-definition";
 
 
 // 計算結果の型
@@ -131,7 +133,7 @@ const CoastFireAgeClient = () => {
 
 
         {/* 結果 */}
-        <div className="SimulatorCoastResult co-kakomiGreen ageResultContainer">
+        <div className="SimulatorCoastResult co-kakomiPink ageResultContainer">
           <div className="co-midashiPink">
             <span></span>
             <h1>シミュレーション結果</h1>
@@ -234,7 +236,9 @@ const CoastFireAgeClient = () => {
         </div>
       </div>
 
-      <HowToUseAchieveSection/>
+      <HowToUseAgeSection/>
+      <CoastFireDefinition/>
+      <AgeLogicExplanation/>
 
       {/* 免責事項 */}
       <section className="mensekiContainer" id="menseki">
