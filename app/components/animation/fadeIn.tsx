@@ -1,7 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export function FadeIn({ children }: { children: React.ReactNode }) {
+type FadeInProps = {
+  children: React.ReactNode;
+  delay?: number
+}
+
+export function FadeIn({ children, delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -29,6 +34,10 @@ export function FadeIn({ children }: { children: React.ReactNode }) {
         transition-all duration-700 ease-out
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
+      style={{
+        animationDelay: `${delay}s`,
+        animationFillMode: 'both' // アニメーション開始前は非表示にするために必要
+      }}
     >
       {children}
     </div>
