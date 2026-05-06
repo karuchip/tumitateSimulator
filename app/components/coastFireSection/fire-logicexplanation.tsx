@@ -1,7 +1,7 @@
 
 const FireLogicExplanation = () => {
   return (
-    <div className="max-w-4xl mx-auto my-12 p-6 md:p-10 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
+    <div className="max-w-4xl mx-6 md:mx-auto my-12 p-6 md:p-10 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
       <h2 className="text-2xl font-bold mb-8 pb-2 border-b-2 border-emerald-500 inline-block">
         必要積立額の計算ロジック
       </h2>

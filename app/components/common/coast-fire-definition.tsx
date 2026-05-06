@@ -1,7 +1,7 @@
 
 const CoastFireDefinition = () => {
   return (
-    <div className="max-w-4xl mx-auto mt-20 mb-12 p-6 md:p-10 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
+    <div className="max-w-4xl mx-6 md:mx-auto mt-20 mb-12 p-6 md:p-10 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
       <h2 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
         Coast FIRE（コーストFIRE）とは？
       </h2>

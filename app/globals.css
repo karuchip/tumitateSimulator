@@ -685,9 +685,15 @@ input {
   font-size: 16px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  .coastTumitateResultAmount .one {
+    font-size: 32px;
+  }
   .coastTumitateResultAmount .two {
-    font-size: 16px;
+    font-size: 16px !important;
+  }
+  .coastTumitateResultAmount .three {
+    font-size: 14px !important;
   }
 }
 
@@ -984,7 +990,7 @@ input {
 
 /* コーストFIRE達成年齢シミュレーター app/coastFireAgeOfAchievementPage/page.tsx() */
 .ageGraphContainer {
-  width: 320px;
+  width: 300px;
   margin: 0 auto;
   height: fit-content;
 }

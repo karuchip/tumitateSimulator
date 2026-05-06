@@ -1,7 +1,7 @@
 
 const AgeLogicExplanation = () => {
   return (
-    <div className="max-w-4xl mx-auto my-12 p-6 md:p-10 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
+    <div className="max-w-4xl mx-6 md:mx-auto my-12 p-6 md:p-10 bg-white border border-gray-200 rounded-2xl shadow-sm text-gray-800 leading-relaxed">
       <h2 className="text-2xl font-bold mb-8 pb-2 border-b-2 border-pink-500 inline-block">
         計算ロジックの解説
       </h2>
