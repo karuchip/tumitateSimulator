@@ -178,7 +178,7 @@ export default function HomeClient() {
               {/* ホバー時のレイヤー */}
               <div className="absolute inset-0 bg-[#000000]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
               {/* リンク */}
-              <Link href="/risyokuSavingSimulatiorPage">
+              <Link href="/risyokuSavingSimulatorPage">
                 <div className="flex gap-4 justify-center px-4 lg-px:0">
                   {/* 画像(フルスクリーンのみ表示) */}
                   <div className="hidden lg:block">
