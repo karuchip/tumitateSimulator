@@ -852,7 +852,7 @@ input {
 
 
 /* 離職期間の貯金推移シミュレーター */
-/* (app/components/risyokuSavingSimulatiorSection/input/inputItems.tsx) */
+/* (app/components/risyokuSavingSimulatorSection/input/inputItems.tsx) */
 .risyokuSavingInputYourSituation {
   margin: 20px 0;
 }
@@ -925,7 +925,7 @@ input {
 
 
 /* 離職期間の結果表 */
-/* app/components/risyokuSavingSimulatiorSection/output/savingResultSection.tsx */
+/* app/components/risyokuSavingSimulatorSection/output/savingResultSection.tsx */
 .risyokuResultAmount .one {
   /* margin: 10px 0; */
   text-align: center;
@@ -949,7 +949,7 @@ input {
   color: #d7760e;
   font-size: 18px !important;
 }
-/* app/components/risyokuSavingSimulatiorSection/output/tableResult.tsx */
+/* app/components/risyokuSavingSimulatorSection/output/tableResult.tsx */
 .marker {
   width: 14px;
   height: 14px;

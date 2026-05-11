@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: "https://fire.hika-design.com/risyokuSavingSimulatiorPage",
+      url: "https://fire.hika-design.com/risyokuSavingSimulatorPage",
       lastModified: new Date(),
     },
     {

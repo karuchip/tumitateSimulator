@@ -92,7 +92,7 @@ export default function TemporaryDrawer() {
 
       <List>
         <ListItem disablePadding>
-          <Link href={"/risyokuSavingSimulatiorPage"} className='w-full'>
+          <Link href={"/risyokuSavingSimulatorPage"} className='w-full'>
             <ListItemButton>
               <ListItemIcon>
                 <HotelIcon />

@@ -5,9 +5,9 @@ import { RisyokuSavingSimulationInput } from "@/src/type/RisyokuSavingSimulator/
 import { RisyokuSavingSimulationOutput } from "@/src/type/RisyokuSavingSimulator/output";
 import { useState, useRef } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import InputItems from "../components/risyokuSavingSimulatiorSection/input/inputItems";
-import ResultComponent from "../components/risyokuSavingSimulatiorSection/output/resultComponent";
-import DummyResultComponent from "../components/risyokuSavingSimulatiorSection/output/dummyResultComponent";
+import InputItems from "../components/risyokuSavingSimulatorSection/input/inputItems";
+import ResultComponent from "../components/risyokuSavingSimulatorSection/output/resultComponent";
+import DummyResultComponent from "../components/risyokuSavingSimulatorSection/output/dummyResultComponent";
 import Menseki from "../components/common/Menseki";
 
 const RisyokuClient = () => {

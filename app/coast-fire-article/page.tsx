@@ -5,6 +5,9 @@ export const metadata = {
     "コーストFIREとは？いくら必要？｜シミュレーションで年齢・資産を計算",
   description:
     "コーストFIREの意味や必要資産、4%ルールをわかりやすく解説。いくらあれば達成できるのか、無料シミュレーションで年齢・積立額をすぐに計算できます。",
+  alternates: {
+    canonical: "https://fire.hika-design.com/coast-fire-article"
+  }
 };
 
 export default function CoastFireArticlePage() {
