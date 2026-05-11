@@ -19,7 +19,7 @@ export const metadata = {
     "コーストfire 目安"
   ],
   alternates: {
-    canonical: "https://fire.hika-design.com",
+    canonical: "https://fire.hika-design.com/",
   },
   robots: {
     index: true,

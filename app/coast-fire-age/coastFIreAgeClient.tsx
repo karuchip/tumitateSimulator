@@ -9,7 +9,6 @@ import InputItems from "@/app/components/coast-fire-age/input/inputItems"
 import { useState, useEffect, useMemo } from "react";
 import CoastFireChart from "@/app/components/coast-fire-age/output/graph"
 import Menseki from "@/app/components/common/Menseki"
-import HowToUseAchieveSection from "../components/coast-fire-age/howtouse";
 import AgeLogicExplanation from "../components/coast-fire-age/age-logicexplanation";
 import HowToUseAgeSection from "../components/coast-fire-age/howtouse";
 import CoastFireDefinition from "../components/common/coast-fire-definition";
