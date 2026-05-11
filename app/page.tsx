@@ -21,11 +21,15 @@ export const metadata = {
   alternates: {
     canonical: "https://fire.hika-design.com",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "コーストFIREシミュレーター｜毎月いくらで達成できる？",
     description:
       "積立額・達成年齢・資産推移をまとめてシミュレーション。コーストFIREを目指すための無料ツール。",
-    url: "https://fire.hika-design.com",
+    url: "https://fire.hika-design.com/",
     siteName: "Hika Dev Design",
     locale: "ja_JP",
     type: "website",

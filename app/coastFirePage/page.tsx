@@ -5,11 +5,14 @@ export const metadata = {
   title: "コーストFIREに必要な積立額はいくら？｜無料シミュレーター",
   description:
     "コーストFIREを達成するために毎月いくら積み立てればよいかを簡単に計算できる無料シミュレーターです。必要元本や利回りをもとに、最適な積立額をシミュレートできます。",
-    openGraph: {
-      title: "コーストFIREに必要な積立額はいくら？",
-      description: "あなたは毎月いくら積み立てれば達成できる？",
-      siteName: "コーストFIREシミュレーター",
-      images: [
+  alternates: {
+    canonical: "https://fire.hika-design.com/coastFirePage"
+  },
+  openGraph: {
+    title: "コーストFIREに必要な積立額はいくら？",
+    description: "あなたは毎月いくら積み立てれば達成できる？",
+    siteName: "コーストFIREシミュレーター",
+    images: [
       {
         url: "https://fire.hika-design.com/ogp.png",
         width: 1200,
@@ -19,7 +22,6 @@ export const metadata = {
     local: "ja_JP",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "コーストFIRE診断",

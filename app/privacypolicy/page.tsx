@@ -1,3 +1,13 @@
+
+export const metadata = {
+  title: "コーストFIREシミュレーター | プライバシーポリシー",
+  description:
+    "本シミュレーターのプライバシーポリシーについて",
+  alternates: {
+    canonical: "https://fire.hika-design.com/privacypolicy"
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <section className="bg-white py-12 px-4 md:px-8 pt-36">
